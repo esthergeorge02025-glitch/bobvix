@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix Shorts Editor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .video-container {
+            aspect-ratio: 9/16;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 antialiased overflow-hidden">
+<div class="relative flex h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-2xl">
+<!-- Top Navigation Bar -->
+<header class="flex items-center justify-between px-6 pt-6 pb-4 z-10 bg-gradient-to-b from-background-dark/80 to-transparent">
+<button class="flex items-center justify-center size-10 rounded-full bg-slate-800/40 backdrop-blur-md text-slate-100 hover:bg-slate-700/50 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="flex items-center gap-3">
+<span class="text-xs font-semibold tracking-widest uppercase text-slate-400">Shorts Editor</span>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white px-6 py-2 rounded-full font-bold text-sm tracking-wide shadow-lg shadow-primary/20 transition-all active:scale-95">
+                Next
+            </button>
+</header>
+<!-- Main Video Preview Area -->
+<main class="flex-1 flex items-center justify-center p-4 relative">
+<div class="video-container w-full max-h-full rounded-xl overflow-hidden shadow-2xl relative bg-slate-900 border border-slate-800/50 group">
+<div class="absolute inset-0 bg-cover bg-center opacity-90" data-alt="A portrait shot of a skateboarder mid-air in sunset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBA6B4yX7ztIdw3JJ7VnKCW-XDvo2GtDjZ5MkYlAFyw42zjj4849U4R-1ETr3t4TFXtw3zF0l_KWn3st5Bf9v6ism5Pgh8W-zB9myYhxe3kpLnME40RqW9JyQMcY5V3G4LLEyZDQAnbqW9Q2gQBjxtZ9fVaAiu3BpyRYmDTG4VJoYPnmlCbbTlzoEUOdEZIO1Z08313qezSjDTbxvsMSp9EwXyKCWWwMoQzXW-OHRW6axpwMg_1Eet80Ogr0TtQKInsfo13l7ztZB3-')">
+</div>
+<!-- Center Play/Pause Indicator (Hidden/Hover State Simulation) -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="size-16 rounded-full bg-black/30 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white cursor-pointer hover:bg-black/50 transition-all">
+<span class="material-symbols-outlined text-4xl fill-1">play_arrow</span>
+</div>
+</div>
+<!-- Active Overlay Example: Text Bounding Box -->
+<div class="absolute top-1/4 left-1/2 -translate-x-1/2 border-2 border-primary rounded-lg p-3 bg-black/20 backdrop-blur-xs cursor-move">
+<p class="text-white text-2xl font-bold italic tracking-tighter drop-shadow-md">SUMMER VIBES</p>
+<div class="absolute -top-3 -right-3 size-6 bg-primary rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-xs">close</span>
+</div>
+<div class="absolute -bottom-3 -right-3 size-6 bg-white text-primary rounded-full flex items-center justify-center shadow-lg">
+<span class="material-symbols-outlined text-xs">open_in_full</span>
+</div>
+</div>
+<!-- Video Progress Bar -->
+<div class="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+<div class="flex items-center gap-3">
+<span class="text-[10px] font-mono text-white/80">00:08</span>
+<div class="flex-1 h-1 bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/3 rounded-full"></div>
+</div>
+<span class="text-[10px] font-mono text-white/80">00:24</span>
+</div>
+</div>
+</div>
+</main>
+<!-- Trim UI Slider -->
+<section class="px-4 pb-4">
+<div class="bg-slate-900/50 rounded-xl p-3 border border-slate-800/50">
+<div class="flex items-center justify-between mb-2">
+<span class="text-[10px] font-bold text-slate-500 uppercase tracking-widest">Trim Duration</span>
+<span class="text-[10px] font-bold text-primary uppercase tracking-widest">16.0s Selected</span>
+</div>
+<div class="relative h-14 w-full bg-slate-800 rounded-lg overflow-hidden flex">
+<!-- Filmstrip Representation -->
+<div class="flex-1 h-full flex gap-0.5 opacity-40 grayscale pointer-events-none">
+<div class="w-12 h-full bg-cover bg-center" data-alt="Filmstrip frame 1" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCzLn46HQrEz_Tsevyf6OfkZr8SI9hkndWMGoXdBoqCE6kZ0OU7jEUzoayyYFnG6d4a6ptL-0w7z8fb_x9E4CxxWxchEORD4LllI_b29JK8y6gQu_2phPci02IPe6YPIzasTE4FFKem716E0Mu8UDVV0VyEzbqYk3YYeP75Sun3D9tN-6tg7Jws7axApmhcSDod8OvSkdp3RYS2LuOEY8pWDNukJ3rA7WsVzPuXd5F8SkQlS9RnUXahTnDsNi1hjIpUqurG2QzhN281')"></div>
+<div class="w-12 h-full bg-cover bg-center" data-alt="Filmstrip frame 2" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCCYyGM8Y0HbJ7HA8--fmztbP2HdMxPAT9iy4uO_tVarjYnLgq_ZmrxkrHtj4WVX13qax5Ycr5NLty-RVWWxzR-UGgRsV6SUnZv03UCFnroqgL6w960xkGnJ3bw3IrqfPxbnjFPS0BoA0sCBEWObjmhMNoBJugO8oTbOtjonaQtpRaOnty2xI2PyugnVZgpRESCUfGaQAg_nTov6zqjCyQ3ETLRzGydeD9RUgXOpCyxxT9H950Jmxcot7vAXYXNXidl_slKV97sqoV')"></div>
+<div class="w-12 h-full bg-cover bg-center" data-alt="Filmstrip frame 3" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAtf5BOgnx4QJOg3KOZvfPtQJ1gjYmdyVQ5vaP2ttZCPaZB43ThbchUSq0TKEUd0uaeviOZt87lZnSop-YE9Z5npQPuspixTeoYSKKD11iBQlnO5nUJ2EH--vwiUuD5gSQhrRW0Q5IgmcGs3xLKCu2bQY-2_yd7c1HYrwfNrAA4vjDo2i2GR87x9qWHtnjFxKx7QlpPCVWC2YN6YF9rntVVxfbgQyNM_rdRGgVYoyNgJiehhaE9MaKB4chiDdYNR9rYQMCXTZrZ-Q-g')"></div>
+<div class="w-12 h-full bg-cover bg-center" data-alt="Filmstrip frame 4" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaYoELPDp60XPsqQKfqzsUVL5vr_7g4Yn4gzoP_i6k1rbpk_jNlvfo6M70BW7DMLSrT5W14hoRHRf6dgu2qyWfgJmLqmRU-6IPbjPPfe2qC8wz0kKB08eluf6hhJBrl8_yDNmvcm6EBLrIEGHfouhUe9Coe_VfxJdWL8J-ouo9vnWToOos7qeaQJEugaZ_5dvsDqn0VMpOE-28_aQvgbIys-5EkXRUXrlCr4P02-e0mxqvaovmDJvRd9JvEzlsZvDhFSBR8Ir_vJuD')"></div>
+<div class="w-12 h-full bg-cover bg-center" data-alt="Filmstrip frame 5" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7ReqfPZ_iWiucNH1jYF_ZblHZKTncfuOgH4grtT3ZuoWIRM9PG3iYR-ALZNsbQcrtyRyCjUY9A5t4-kYo3wS3etZh0szPl0h-obaay43j8Bwqz9v72QoXW7m5a2rjII3Z_OVD0Cf7RlNxXaGHF1NMnrTQe2-TO4iwJhcGfHY3OVPUVudxA3xw_NaqmVAW8srd82XaIV3GL876Y0GXS5HX0VoMuIaK4JHOgljFJ8gewrD3QEccqKvMiAYnfPZT9IjAMA3-0Ax_dhVF')"></div>
+<div class="w-12 h-full bg-cover bg-center" data-alt="Filmstrip frame 6" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlgmsX-OFh-5407-haBM41LNqav_cT_Kf3vVTdYIXPMCelYcmg7NlifaXWuBmTQ0-KobaIdy4ft0gGvftRY4x1s04q0u-4IJDv-nG4Zp2WLj4lAvKIfhSNRR3CEGZsVDgTwRwgDruquktq2sYMJQ9YOc7rkZxQzzED2AC1TmvBoB2NOblW6URV6MEacg9TkOU2_FBxsCax_-cXzXag3xJbCuQomPBbORV6RpntXanYmZhmykb-C30M4kUfJ1EJwiYozVhMC-EoxQdr')"></div>
+<div class="w-12 h-full bg-cover bg-center" data-alt="Filmstrip frame 7" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQzS42kZjaM4msTt9QtQswLpOMuisAL7_Z0GandtfEm786H3VUWPxEaRElKY6oiPvrIb3IUrE-lUDBvxkTENgUcld3I4DRW-4j14ZiOKkJzelEIC6eDxTEPkLGZSwEwMs0IfbaxaobNP7GfhHgr5Xnvh75nOmORClAn0ucXuP7YHan9k-EAv-9Bb31KFbpbPVG5DkiPb-8nBn5yfJ7lQ0j8u8cyCVcrkL3W2pvioH5LIpJ30N6ECIRBmY01pFsawhS34kGxsqPSSNR')"></div>
+</div>
+<!-- Selection Overlay -->
+<div class="absolute inset-y-0 left-[15%] right-[25%] border-y-4 border-primary bg-primary/10">
+<div class="absolute left-0 inset-y-0 w-4 bg-primary rounded-l-md flex items-center justify-center cursor-ew-resize">
+<div class="w-0.5 h-6 bg-white/50 rounded-full"></div>
+</div>
+<div class="absolute right-0 inset-y-0 w-4 bg-primary rounded-r-md flex items-center justify-center cursor-ew-resize">
+<div class="w-0.5 h-6 bg-white/50 rounded-full"></div>
+</div>
+</div>
+<!-- Playhead -->
+<div class="absolute inset-y-0 left-[40%] w-0.5 bg-white shadow-[0_0_10px_rgba(255,255,255,0.5)] z-20"></div>
+</div>
+</div>
+</section>
+<!-- Bottom Tool Dock -->
+<footer class="pb-8 pt-2 px-6 bg-background-dark/95 backdrop-blur-xl border-t border-slate-800/50">
+<div class="flex items-center justify-between gap-2 max-w-sm mx-auto">
+<a class="flex flex-col items-center gap-1.5 flex-1 group" href="#">
+<div class="size-12 flex items-center justify-center rounded-xl text-slate-400 group-hover:bg-slate-800 group-hover:text-slate-100 transition-all">
+<span class="material-symbols-outlined text-[28px]">auto_fix_high</span>
+</div>
+<span class="text-[10px] font-medium text-slate-500 group-hover:text-slate-200">Filters</span>
+</a>
+<a class="flex flex-col items-center gap-1.5 flex-1 group" href="#">
+<div class="size-12 flex items-center justify-center rounded-xl bg-primary/10 text-primary transition-all">
+<span class="material-symbols-outlined text-[28px] fill-1">music_note</span>
+</div>
+<span class="text-[10px] font-bold text-primary">Music</span>
+</a>
+<a class="flex flex-col items-center gap-1.5 flex-1 group" href="#">
+<div class="size-12 flex items-center justify-center rounded-xl text-slate-400 group-hover:bg-slate-800 group-hover:text-slate-100 transition-all">
+<span class="material-symbols-outlined text-[28px]">text_fields</span>
+</div>
+<span class="text-[10px] font-medium text-slate-500 group-hover:text-slate-200">Text</span>
+</a>
+<a class="flex flex-col items-center gap-1.5 flex-1 group" href="#">
+<div class="size-12 flex items-center justify-center rounded-xl text-slate-400 group-hover:bg-slate-800 group-hover:text-slate-100 transition-all">
+<span class="material-symbols-outlined text-[28px]">mood</span>
+</div>
+<span class="text-[10px] font-medium text-slate-500 group-hover:text-slate-200">Stickers</span>
+</a>
+<a class="flex flex-col items-center gap-1.5 flex-1 group" href="#">
+<div class="size-12 flex items-center justify-center rounded-xl text-slate-400 group-hover:bg-slate-800 group-hover:text-slate-100 transition-all">
+<span class="material-symbols-outlined text-[28px]">layers</span>
+</div>
+<span class="text-[10px] font-medium text-slate-500 group-hover:text-slate-200">Overlay</span>
+</a>
+</div>
+</footer>
+<!-- Bottom Home Indicator Area -->
+<div class="h-1 w-32 bg-slate-800 rounded-full mx-auto mb-2 opacity-50"></div>
+</div>
+</body></html>

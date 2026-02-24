@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix Notifications</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .notification-card {
+            transition: background-color 0.2s ease;
+        }
+        .notification-card:active {
+            background-color: rgba(60, 131, 246, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header -->
+<header class="sticky top-0 z-20 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center justify-between px-6 py-4">
+<h1 class="text-2xl font-bold tracking-tight">Notifications</h1>
+<button class="text-sm font-semibold text-primary hover:opacity-80 transition-opacity">
+                Mark all as read
+            </button>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Today Section -->
+<section class="mt-4">
+<h2 class="px-6 py-2 text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Today</h2>
+<div class="space-y-1">
+<!-- New Follower -->
+<div class="notification-card flex items-center gap-4 px-6 py-4 bg-white dark:bg-slate-900/40 hover:bg-slate-50 dark:hover:bg-slate-800/60 relative group">
+<div class="absolute left-1 top-1/2 -translate-y-1/2 w-1 h-8 bg-primary rounded-full"></div>
+<div class="relative shrink-0">
+<div class="w-14 h-14 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden border-2 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="User profile avatar of Alex Vix" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhHtaYIzLFhPla0hSeCPTWxl8R3af26QP4_fnRtUr7pBM8BgJzS5cTt24XHcc4W_dw3TKTDp5oKwUjGciShRuveH1zcNhaBPnRIBgxEHSyCxLmbQ7RRbkucQuwRmWEIrocBpU0RkFmMqBq3fRljPPzQDs-XZOi0SWbMBxMVWVRiGRpuhb5zy4ID0QRLUblJsSGtn_JPPLTliK6k07JRUVelZI_tI5adiaVSNEmOddI2UDG88YreFX5By0yIcgF7PML1mQfB4nZIhpS"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-primary text-white rounded-full p-1 border-2 border-white dark:border-background-dark">
+<span class="material-symbols-outlined text-[14px] block">person_add</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm leading-snug">
+<span class="font-bold">@alex_vix</span> started following you.
+                        </p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">2h ago</p>
+</div>
+<button class="shrink-0 px-4 py-2 bg-primary text-white text-xs font-bold rounded-lg hover:bg-primary/90 transition-colors">
+                        Follow Back
+                    </button>
+</div>
+<!-- Live Started -->
+<div class="notification-card flex items-center gap-4 px-6 py-4 bg-white dark:bg-slate-900/40 hover:bg-slate-50 dark:hover:bg-slate-800/60 relative">
+<div class="absolute left-1 top-1/2 -translate-y-1/2 w-1 h-8 bg-primary rounded-full"></div>
+<div class="relative shrink-0">
+<div class="w-14 h-14 rounded-full p-0.5 border-2 border-primary animate-pulse">
+<img class="w-full h-full rounded-full object-cover" data-alt="Avatar of streamer currently live" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQy9Y_Eh5RKPXgaDqsujEbO1E4dhMv1khhe5uNK3T1fQxhxpDa3C8C_u3Yv-opUs8zzl2xXZmQDOQ1Gjuok8y4Tw2mdsoG1xjVdmj5ec6KVVxYzIv1n7-0N41MTs0qS2JZoEvoNmEEtUQJyOhmqvKxoX15SFo4G-vtQ20ZSPHpe9IEDW5ZApBnTjUHyoXZjWmHwNzMBSoG9upFaeg8HT2LrwraISgqIWQeCosDcbnJarj9h1_oJwxwBqalYYjlCL68SWNIdaO0WoOo"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-red-500 text-white rounded-md px-1 text-[8px] font-bold border border-white dark:border-background-dark">LIVE</div>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm leading-snug">
+<span class="font-bold">@creative_mind</span> is live now! <span class="text-primary italic">"Designing for BobVix..."</span>
+</p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">4h ago</p>
+</div>
+<button class="shrink-0 px-4 py-2 bg-primary/20 text-primary text-xs font-bold rounded-lg hover:bg-primary/30 transition-colors">
+                        Join
+                    </button>
+</div>
+<!-- Earnings Update -->
+<div class="notification-card flex items-center gap-4 px-6 py-4 bg-white dark:bg-slate-900/40 hover:bg-slate-50 dark:hover:bg-slate-800/60">
+<div class="shrink-0 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">payments</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm leading-snug">
+                            You earned <span class="font-bold text-green-500">$42.50</span> from your last video.
+                        </p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">6h ago</p>
+</div>
+<button class="shrink-0 px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs font-bold rounded-lg hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+                        Details
+                    </button>
+</div>
+</div>
+</section>
+<!-- Yesterday Section -->
+<section class="mt-8">
+<h2 class="px-6 py-2 text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">Yesterday</h2>
+<div class="space-y-1">
+<!-- Comment on Video -->
+<div class="notification-card flex items-center gap-4 px-6 py-4 bg-white dark:bg-slate-900/40 hover:bg-slate-50 dark:hover:bg-slate-800/60">
+<div class="relative shrink-0">
+<div class="w-14 h-14 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Avatar of user who commented" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1T-u_6EDBMUpWp31PvVGr8MaDjkkrRUsJKiqzHuewTsiC2EXZcE1b85FrBo7ALpwQ8uiMnIzG-26nu9fFzvwCQ7rt39eSAdvJvw5xykF6-V5ZNY1Qdfu2aDZteemDrCSvCuhbt6LY2PHpJ_YlXNysrFZ25A4cnZAj-OX2Pr2x_kQy2tvFz6lIxn81Rn_CIdygoKrbxsBv81C56mBcJ7UXQDT04Z87tSGOCrzi89O9YNVaAW--FvhgfJAxThuqZ1YMpOCGNocQcesw"/>
+</div>
+<div class="absolute -bottom-1 -right-1 bg-slate-500 text-white rounded-full p-1 border-2 border-white dark:border-background-dark">
+<span class="material-symbols-outlined text-[14px] block">chat_bubble</span>
+</div>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm leading-snug">
+<span class="font-bold">@pixel_purist</span> commented: "The lighting in this scene is absolutely perfect!"
+                        </p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">1d ago</p>
+</div>
+<button class="shrink-0 px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs font-bold rounded-lg hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+                        Reply
+                    </button>
+</div>
+<!-- System Notification -->
+<div class="notification-card flex items-center gap-4 px-6 py-4 bg-white dark:bg-slate-900/40 hover:bg-slate-50 dark:hover:bg-slate-800/60">
+<div class="shrink-0 w-14 h-14 rounded-full bg-slate-200 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<div class="flex-1 min-w-0">
+<p class="text-sm leading-snug">
+                            Your account security check was completed successfully.
+                        </p>
+<p class="text-xs text-slate-500 dark:text-slate-400 mt-1">1d ago</p>
+</div>
+<button class="shrink-0 px-4 py-2 bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-200 text-xs font-bold rounded-lg hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+                        View
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full z-30 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 pb-safe">
+<div class="flex justify-around items-center px-4 py-3">
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">explore</span>
+<span class="text-[10px] font-medium">Discover</span>
+</a>
+<a class="flex flex-col items-center gap-1 -mt-6" href="#">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white shadow-lg shadow-primary/30">
+<span class="material-symbols-outlined text-3xl">add</span>
+</div>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1">notifications</span>
+<span class="text-[10px] font-medium">Inbox</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-500 dark:text-slate-400" href="#">
+<span class="material-symbols-outlined text-2xl">account_circle</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

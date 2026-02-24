@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix Video Analytics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(60, 131, 246, 0.4), 0 0 40px rgba(60, 131, 246, 0.2);
+        }
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen font-display">
+<div class="relative flex min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark overflow-x-hidden border-x border-slate-200 dark:border-slate-800">
+<!-- Top Navigation -->
+<div class="flex items-center justify-between p-4 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10 border-b border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-lg overflow-hidden border-2 border-primary">
+<img alt="Video Thumbnail" class="w-full h-full object-cover" data-alt="Miniature of the current video thumbnail" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzQ6EbomPYe81h4t0oLH-2f8LSYlEnr4ZRuC0bu_nUbZq_PYdCPyIlCarkzbGqaTgaVfSiYofLFlZ-8Xzzx53TosHaJb4-x71EYl7U7VdEMIxZoyGtKXrXa-REhV4gik5RtPpvcRRP7g041I_7VDAtcY5IS5jctEbhxR5-OMQiNrB4Mlgx8A8LOb4fwSZ9QNt47MoZGuFWsqfYLGUVT3r_eTQikH03ysq39PWoldqXOSY5srLrO4VeMxteTGhr1GISWFpTRX9-1AVG"/>
+</div>
+<div>
+<h1 class="text-sm font-bold leading-tight truncate w-40">AI Future: The BobVix Story</h1>
+<p class="text-xs text-slate-500 dark:text-slate-400">Published 2 days ago</p>
+</div>
+</div>
+<button class="flex size-10 items-center justify-center rounded-full bg-slate-100 dark:bg-slate-800 text-primary">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+<!-- Time Range Selector -->
+<div class="px-4 py-4">
+<div class="flex h-11 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-primary has-[:checked]:shadow-sm text-slate-500 dark:text-slate-400 has-[:checked]:text-primary dark:has-[:checked]:text-white text-xs font-bold uppercase tracking-wider transition-all">
+<span>24h</span>
+<input class="invisible w-0" name="timeframe" type="radio" value="24h"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-primary has-[:checked]:shadow-sm text-slate-500 dark:text-slate-400 has-[:checked]:text-primary dark:has-[:checked]:text-white text-xs font-bold uppercase tracking-wider transition-all">
+<span>7d</span>
+<input checked="" class="invisible w-0" name="timeframe" type="radio" value="7d"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-primary has-[:checked]:shadow-sm text-slate-500 dark:text-slate-400 has-[:checked]:text-primary dark:has-[:checked]:text-white text-xs font-bold uppercase tracking-wider transition-all">
+<span>30d</span>
+<input class="invisible w-0" name="timeframe" type="radio" value="30d"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-primary has-[:checked]:shadow-sm text-slate-500 dark:text-slate-400 has-[:checked]:text-primary dark:has-[:checked]:text-white text-xs font-bold uppercase tracking-wider transition-all">
+<span>All</span>
+<input class="invisible w-0" name="timeframe" type="radio" value="All"/>
+</label>
+</div>
+</div>
+<!-- Key Metrics Grid -->
+<div class="grid grid-cols-2 gap-3 px-4 pb-6">
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-tight">Views</p>
+<span class="text-emerald-500 text-[10px] font-bold">+12.4%</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">142.8K</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-tight">Watch Time</p>
+<span class="text-emerald-500 text-[10px] font-bold">+5.2%</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">3.2K<span class="text-xs font-normal text-slate-500 ml-1">hrs</span></p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-tight">Likes</p>
+<span class="text-rose-500 text-[10px] font-bold">-0.8%</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">12.5K</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-4 bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-start">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-tight">Shares</p>
+<span class="text-emerald-500 text-[10px] font-bold">+24%</span>
+</div>
+<p class="text-slate-900 dark:text-slate-100 text-2xl font-bold">842</p>
+</div>
+</div>
+<!-- Performance Chart -->
+<div class="px-4 pb-6">
+<div class="rounded-xl bg-slate-100 dark:bg-slate-800/30 p-4 border border-slate-200 dark:border-slate-800">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-bold text-sm">Performance Velocity</h3>
+<span class="text-[10px] font-bold text-primary px-2 py-0.5 rounded-full bg-primary/10">LIVE UPDATES</span>
+</div>
+<div class="relative h-40 w-full">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 150">
+<defs>
+<lineargradient id="chartGradient" x1="0%" x2="0%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#3c83f6" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#3c83f6" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,120 Q50,110 80,130 T160,80 T240,100 T320,40 T400,60 V150 H0 Z" fill="url(#chartGradient)"></path>
+<path d="M0,120 Q50,110 80,130 T160,80 T240,100 T320,40 T400,60" fill="none" stroke="#3c83f6" stroke-linecap="round" stroke-width="3"></path>
+<!-- Active Point -->
+<circle cx="320" cy="40" fill="white" r="4" stroke="#3c83f6" stroke-width="2"></circle>
+</svg>
+<div class="flex justify-between mt-2 text-[10px] text-slate-400 font-bold uppercase">
+<span>Mon</span>
+<span>Wed</span>
+<span>Fri</span>
+<span>Sun</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Earnings Widget (Neon Glow) -->
+<div class="px-4 pb-8">
+<div class="neon-glow rounded-xl bg-primary p-6 relative overflow-hidden">
+<div class="absolute -right-8 -top-8 size-32 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<p class="text-white/80 text-xs font-bold uppercase tracking-widest mb-1">Total Earnings from this Video</p>
+<div class="flex items-baseline gap-2">
+<span class="text-white text-4xl font-bold tracking-tighter">$2,842.15</span>
+<span class="text-white/60 text-xs font-medium">USD</span>
+</div>
+<div class="mt-6 flex gap-2">
+<button class="flex-1 bg-white text-primary rounded-lg py-2.5 text-xs font-bold uppercase tracking-wider">Withdraw</button>
+<button class="flex-1 bg-primary-dark/20 bg-black/10 border border-white/20 text-white rounded-lg py-2.5 text-xs font-bold uppercase tracking-wider">Details</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Recent Interactions -->
+<div class="px-4 pb-20">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-bold text-base">Recent Interactions</h3>
+<a class="text-primary text-xs font-bold" href="#">View All</a>
+</div>
+<div class="space-y-3">
+<!-- Comment 1 -->
+<div class="flex gap-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800">
+<img alt="User Avatar" class="size-10 rounded-full object-cover shrink-0" data-alt="Close-up portrait of a user" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF6FTeMm8qWT6QyeQw9X6iOnU3mBZFYP3vfHu4uvm5-TIoyVPzBdsH7IuhJDxoHSSIUxhxBX36fAK-D08nV_0guGUMdKS5YrdNB0_ErIvRvLtFKrK3mwa8-wNNNHfXBU8kMHSzS9YY7xEAmWGCKOgDcIR2dzE2_av7JL20nKFmGVGihfJwqlpcyZRlEybeAverAcPPzpJMR8JgOuXIck9i0HsRuF3asTWeRWpn1eVRQT5P9vkcNs3pWPg73PNmfqXTZDD2RKKr9ZnC"/>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<span class="text-xs font-bold">@alex_vortex</span>
+<span class="text-[10px] text-slate-500">2m ago</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">This is the most detailed breakdown of the BobVix system I've seen yet. Absolutely mind-blowing quality!</p>
+<div class="flex gap-3 mt-2">
+<button class="flex items-center gap-1 text-[10px] font-bold text-slate-500"><span class="material-symbols-outlined !text-sm">favorite</span> 24</button>
+<button class="flex items-center gap-1 text-[10px] font-bold text-slate-500"><span class="material-symbols-outlined !text-sm">reply</span> Reply</button>
+</div>
+</div>
+</div>
+<!-- Comment 2 -->
+<div class="flex gap-3 p-3 rounded-xl bg-slate-100 dark:bg-slate-800/40 border border-slate-200 dark:border-slate-800">
+<img alt="User Avatar" class="size-10 rounded-full object-cover shrink-0" data-alt="Smiling person avatar profile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1kHXmTBAPEebi71nZVTx5lAqQmi6uEdz8i1UmngJbav0QXJRPmJXtIEXN6ZyOvlpqWZPEvDcr2tfFVhhP7K4tyfpeOdDdAqCONDYWSxc7DzlDY8H3dBKX3g-JvVI_q2Jdp8tWnnVX6OqluL42WkyHSOxbmM3x2wJO0z6Uv9UmOiOs6Y3cvLNsfhxypezP_xLS5SAOoBGfv0rWrl39R7N325rcldZidARx5cMDamqsGHv3hlZOVxQsoaxZMEKoTdq4xsSCZrL5r4Oa"/>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<span class="text-xs font-bold">@sarah_codes</span>
+<span class="text-[10px] text-slate-500">15m ago</span>
+</div>
+<p class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed line-clamp-2">Can you do a follow up video on the custom shaders? The neon glow effect is insane!</p>
+<div class="flex gap-3 mt-2">
+<button class="flex items-center gap-1 text-[10px] font-bold text-slate-500"><span class="material-symbols-outlined !text-sm">favorite</span> 12</button>
+<button class="flex items-center gap-1 text-[10px] font-bold text-slate-500"><span class="material-symbols-outlined !text-sm">reply</span> Reply</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="fixed bottom-0 left-0 right-0 max-w-md mx-auto z-20">
+<div class="flex gap-2 border-t border-slate-200 dark:border-slate-800 bg-white/90 dark:bg-background-dark/90 backdrop-blur-xl px-4 pb-6 pt-3">
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<p class="text-[10px] font-bold uppercase tracking-widest">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined !fill-[1]">monitoring</span>
+<p class="text-[10px] font-bold uppercase tracking-widest">Analytics</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">video_library</span>
+<p class="text-[10px] font-bold uppercase tracking-widest">Content</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">settings</span>
+<p class="text-[10px] font-bold uppercase tracking-widest">Settings</p>
+</a>
+</div>
+</div>
+</div>
+</body></html>

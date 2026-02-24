@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix Shorts - Empty State</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<header class="flex items-center px-4 py-4 justify-between sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10">
+<div class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</div>
+<h1 class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Shorts</h1>
+<div class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 cursor-pointer transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">more_vert</span>
+</div>
+</header>
+<!-- Main Content Area (Empty State) -->
+<main class="flex-1 flex flex-col items-center justify-center px-6 pb-20">
+<!-- Premium Illustration Container -->
+<div class="relative w-full max-w-sm aspect-square mb-8 flex items-center justify-center">
+<!-- Decorative Glow Background -->
+<div class="absolute inset-0 bg-primary/10 dark:bg-primary/20 rounded-full blur-3xl scale-75"></div>
+<!-- Main Illustration Image -->
+<div class="relative z-0 bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-800 dark:to-slate-900 rounded-3xl w-64 h-64 flex items-center justify-center overflow-hidden shadow-2xl border border-slate-300/20 dark:border-slate-700/30" data-alt="Abstract premium 3D shapes floating in dark space" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDozZdmxd7u9fJPRP5dNUTxS0IHLc9WmF6LL_K90-8BLG0haqSOW9wg6XOYs8O6lnaTFo8h_uKT7MOLuH1jFwPr310Hgha72qdrAgfhKPjFKk17JI-N4u_DQKGyjxsc00nbQozfyH8ech2Yg69PGcTL50bT0puz27DqsteAEtSqvDMZ5g0q0binfBcKFLZGzd-yI5euGG6_IUEMW1eQNIdOjXesjGZTzgx9Svko6IbckP8ZP7kNq2zGHpCUvbAKDfMPu0V9Bavf-E-H"); background-size: cover; background-position: center;'>
+<!-- Overlay Icon representing empty feed -->
+<div class="absolute inset-0 bg-background-dark/40 flex items-center justify-center backdrop-blur-[2px]">
+<span class="material-symbols-outlined text-7xl text-primary drop-shadow-[0_0_15px_rgba(60,131,246,0.5)]">movie_filter</span>
+</div>
+</div>
+</div>
+<!-- Typography -->
+<div class="text-center space-y-3 max-w-xs mb-10">
+<h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-slate-100">Nothing here yet</h2>
+<p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+                Start exploring the best live moments or follow your favorite creators to fill this space.
+            </p>
+</div>
+<!-- Call to Action Buttons -->
+<div class="flex flex-col gap-3 w-full max-w-[280px]">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-xl transition-all active:scale-95 flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">explore</span>
+<span>Explore Live</span>
+</button>
+<button class="w-full bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 text-slate-900 dark:text-slate-100 font-bold py-4 rounded-xl transition-all active:scale-95 flex items-center justify-center gap-2 border border-slate-300 dark:border-slate-700">
+<span class="material-symbols-outlined text-[20px]">person_add</span>
+<span>Follow Creators</span>
+</button>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 pb-safe-area">
+<div class="flex items-center justify-around h-16 max-w-md mx-auto">
+<!-- Home -->
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium font-display">Home</span>
+</a>
+<!-- Shorts (Active) -->
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">movie_filter</span>
+<span class="text-[10px] font-bold font-display">Shorts</span>
+</a>
+<!-- Live -->
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">sensors</span>
+<span class="text-[10px] font-medium font-display">Live</span>
+</a>
+<!-- Following -->
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors relative" href="#">
+<span class="material-symbols-outlined">group</span>
+<span class="text-[10px] font-medium font-display">Following</span>
+<!-- Notification Badge -->
+<div class="absolute top-2 right-1/4 w-2 h-2 bg-primary rounded-full border-2 border-background-light dark:border-background-dark"></div>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center flex-1 gap-1 text-slate-500 dark:text-slate-400 hover:text-primary dark:hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="text-[10px] font-medium font-display">Profile</span>
+</a>
+</div>
+</nav>
+<!-- Padding for Bottom Nav -->
+<div class="h-16"></div>
+</body></html>

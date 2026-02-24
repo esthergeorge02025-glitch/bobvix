@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix Inbox</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .electric-glow {
+            box-shadow: 0 0 15px 2px rgba(60, 131, 246, 0.5), 0 0 30px 5px rgba(60, 131, 246, 0.3);
+        }
+        .glass-search {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(8px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header Section -->
+<header class="px-6 pt-8 pb-4 sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md z-10">
+<div class="flex items-center justify-between mb-6">
+<h1 class="text-3xl font-bold tracking-tight">Messages</h1>
+<div class="flex gap-4">
+<button class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined text-2xl">settings</span>
+</button>
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
+<img alt="User Profile" class="w-full h-full rounded-full" data-alt="User profile avatar of a male designer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0mB_vl-GNThQMtWDZpUVK940-ARgYm87UrwxInluS4yyG-VGtdG3ChGbINlbewtTDbO1hsloghF6pzZ4RpQBi3OeC-QsrzpWiC0WEZWjQOQk2m9lKM01ApMRCwFU_k4llk-9pUJGOA-rLmtwmzcVAxbKvC6oHTJZeQkl58qjctX7Kzq0bUoga-052Ud73QpxKJqjJ1XoNZ_HqlbHuh0SgOpuSHv0juh3T0Ehu5bh6P6WSAVtPGRSpSCKmcl-oW_T8EODZt4GmWhd9"/>
+</div>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400 group-focus-within:text-primary transition-colors">search</span>
+</div>
+<input class="w-full h-12 pl-12 pr-4 glass-search border border-slate-200 dark:border-slate-800 rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all placeholder:text-slate-500" placeholder="Search messages..." type="text"/>
+</div>
+</header>
+<!-- Tabs Navigation -->
+<nav class="px-6 mb-2">
+<div class="flex gap-6 border-b border-slate-200 dark:border-slate-800">
+<button class="pb-3 text-sm font-bold border-b-2 border-primary text-primary">All Chats</button>
+<button class="pb-3 text-sm font-medium text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Unread</button>
+<button class="pb-3 text-sm font-medium text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Groups</button>
+<button class="pb-3 text-sm font-medium text-slate-500 hover:text-slate-700 dark:hover:text-slate-300">Archived</button>
+</div>
+</nav>
+<!-- Conversations List -->
+<main class="flex-1 overflow-y-auto px-2">
+<!-- Conversation Item 1 (Unread) -->
+<div class="flex items-center gap-4 p-4 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 cursor-pointer transition-colors group">
+<div class="relative shrink-0">
+<img alt="Alex Rivera" class="w-14 h-14 rounded-full object-cover" data-alt="Profile picture of Alex Rivera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD30FWAKDTL9mGm0MAdDQ63tOTjEMo9n7-ZKKoiXomnF7B9ssTaro9dTRPa8TxyLIhwDrviTGI_tTpRFB4rMAeX8w9j9WtuFWEX0b0lye5fTkG5RZaSGZB_bBDB6Pmm-z7zEKyEv0lDWT-D-tLgrZ-5dgx4TnB0TksqlmgUrMoY80emyQ_QA_RA3C7ouHmiN30drwb4bcDV_dXd-VpFoyEgmLHEnqUY72a8OhmIVbELlrNdeKaB95X_EiQ60SJH9c6im8FXC0zBp3pG"/>
+<div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 border-2 border-background-light dark:border-background-dark rounded-full"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-bold text-base truncate">Alex Rivera</h3>
+<span class="text-xs font-medium text-primary">2m ago</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-sm text-slate-900 dark:text-slate-100 font-medium truncate pr-4">See you at the meeting! Don't forget the slides...</p>
+<div class="w-2.5 h-2.5 bg-primary rounded-full shrink-0 shadow-[0_0_8px_rgba(60,131,246,0.6)]"></div>
+</div>
+</div>
+</div>
+<!-- Conversation Item 2 -->
+<div class="flex items-center gap-4 p-4 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 cursor-pointer transition-colors group">
+<div class="relative shrink-0">
+<img alt="Sarah Chen" class="w-14 h-14 rounded-full object-cover" data-alt="Profile picture of Sarah Chen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAg9EMxm-Pn5ADciiWERvpAmktt11SkvwiNOuilbUCYYeNVcFI2a1QJslIiS-9lu9kA9sNFL4XwKhfpLLN5h3O7WuKKCWR4gwzcvWS9QI2ccBguRjiQD_dg7ZkTorIO2m0udPpbsWb1NmXykX3jYKLeTSSbQzIpVqVzcDd754cn7mGngUtxMhIYdooOoZLmEV8X3Avd43GOcXtwMckpd_4M5Lyxi2G6SHE-OKLPkwEeYuAyoZCmr6Pyw019ZLoobAZJCQ4Acm-ybR4G"/>
+<div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-slate-400 border-2 border-background-light dark:border-background-dark rounded-full"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-bold text-base truncate">Sarah Chen</h3>
+<span class="text-xs text-slate-500">1h ago</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate pr-4">The prototype is looking great. Let's push to prod.</p>
+</div>
+</div>
+</div>
+<!-- Conversation Item 3 -->
+<div class="flex items-center gap-4 p-4 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 cursor-pointer transition-colors group">
+<div class="relative shrink-0">
+<img alt="Jordan Smith" class="w-14 h-14 rounded-full object-cover" data-alt="Profile picture of Jordan Smith" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbQgrF4qtig_DDvox1uUrXFP3rYA2Qkw8yTfD4IXfRTkxGiu2yjlR12R14PV1gL4FQSvZiM22tYokhXApeWIJYZyg3IEohNlvw1-dUwXuMaojgfvHmPEpaCz0l9-QOyYTSCYup8CWBoy8dGc5C7tvzLjHMDWXiP8vuKI3HoJPFPzaWW7PlY9TkfarHdO94HP8udJ9zc31AUNOfLK7W3t1OtzpWXq4uQtKI7LCv4-k4SP-_-6-1NlwcAG7ow_DjNNufbzxw_eb9c_iG"/>
+<div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 border-2 border-background-light dark:border-background-dark rounded-full"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-bold text-base truncate">Jordan Smith</h3>
+<span class="text-xs text-slate-500">3h ago</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate pr-4">Are we still on for the gym session tonight?</p>
+</div>
+</div>
+</div>
+<!-- Conversation Item 4 (Unread) -->
+<div class="flex items-center gap-4 p-4 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 cursor-pointer transition-colors group">
+<div class="relative shrink-0">
+<img alt="Elena Rodriguez" class="w-14 h-14 rounded-full object-cover" data-alt="Profile picture of Elena Rodriguez" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDafBsrSNbeaqk44ZiD-WZtUnhcZmAr-VXAlm1K_ibz-r1Cbp2yNZLQkGJc1zY1OyOySDA2z88dQR8qWHCj5G0Sh2nFk_BBmEPVo8JueMS1B-QCgVoPnIPytFGmB0YbXOjNepzlmpT9pGV2dOacPS4tabvXmlqJ_6U7nYAIyf3sbu5nveGUGzzX4katOJ61JJImJD9Vz16TdvvQoPSfTQt7158-DgcKcLHJ1gGYVMoqzEeOFf3YrLg_ZJ9l7TGINXVtN3CQAZQAv0rs"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-bold text-base truncate">Elena Rodriguez</h3>
+<span class="text-xs font-medium text-primary">5h ago</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-sm text-slate-900 dark:text-slate-100 font-medium truncate pr-4">You: Sent a photo</p>
+<div class="w-2.5 h-2.5 bg-primary rounded-full shrink-0 shadow-[0_0_8px_rgba(60,131,246,0.6)]"></div>
+</div>
+</div>
+</div>
+<!-- Conversation Item 5 -->
+<div class="flex items-center gap-4 p-4 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 cursor-pointer transition-colors group">
+<div class="relative shrink-0">
+<img alt="Marcus Thorne" class="w-14 h-14 rounded-full object-cover" data-alt="Profile picture of Marcus Thorne" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLc8O490lBiH1wMI4irkXxbPcht5Tj1PqHZm3a7QXwi3Ih8Zujq9z9GPSvCzjYw5ddJxQAhCJ4eEYRznBNxeHbGq-5VjAeSw9gBwlKptJWajbzFFgQGLQ1NCdhNwrZphyuj_amVLKxkXrydFgH-xlU8I2DjZQCPd0tmiLk-FEuJw_R1wrOtFtrMQAvj06J3ufZgpQuaePYQDwb55UczcuB6RBEyHf-hZzR_NCFLXB4vdLoecH5CzSjEm2Wjoqjj5WHkijxw4kg0Mza"/>
+<div class="absolute bottom-0 right-0 w-3.5 h-3.5 bg-slate-400 border-2 border-background-light dark:border-background-dark rounded-full"></div>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-bold text-base truncate">Marcus Thorne</h3>
+<span class="text-xs text-slate-500">Yesterday</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate pr-4">Thanks for the update on the BobVix project.</p>
+</div>
+</div>
+</div>
+<!-- Conversation Item 6 -->
+<div class="flex items-center gap-4 p-4 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-800/50 cursor-pointer transition-colors group">
+<div class="relative shrink-0">
+<img alt="Lily Vance" class="w-14 h-14 rounded-full object-cover" data-alt="Profile picture of Lily Vance" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQN3A00NPEvm88GE4PBHkKaRBQzinn_SEGuEWjNc73Oq5Aoh1lmWsr9fLNOqOh0F2Tp_uRHuy49JVOYsk9_KEXlkLYU6I4UInV8Ue1eWbpWMRxhUeVpfLDHSwxSLQVzejbagQOP0ljug-jB6UdU3gtL9gR9_yfAoJLRRJ11lv0eHDL6nuKx_SJAMW4AjsWOK7PLthjit6ic56s7doyXckTOsttabK3l-Gn9q7k_MslxNcjvFLBrW4plFkJdWZTAoWoIf1svLSo9CIZ"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex justify-between items-baseline mb-1">
+<h3 class="font-bold text-base truncate">Lily Vance</h3>
+<span class="text-xs text-slate-500">Oct 24</span>
+</div>
+<div class="flex justify-between items-center">
+<p class="text-sm text-slate-500 dark:text-slate-400 truncate pr-4">Did you see the new UI components?</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Floating Action Button -->
+<button class="fixed bottom-24 right-6 w-14 h-14 bg-primary text-white rounded-full flex items-center justify-center electric-glow active:scale-95 transition-transform z-20">
+<span class="material-symbols-outlined text-3xl">edit_square</span>
+</button>
+<!-- Bottom Navigation Bar -->
+<nav class="border-t border-slate-200 dark:border-slate-800 bg-background-light dark:bg-background-dark/95 backdrop-blur-lg px-2 pb-6 pt-2">
+<div class="flex justify-around items-center max-w-lg mx-auto">
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-primary transition-colors" href="#">
+<span class="material-symbols-outlined fill-1">chat</span>
+<span class="text-[10px] font-medium">Messages</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">notifications</span>
+<span class="text-[10px] font-medium">Alerts</span>
+</a>
+<a class="flex flex-col items-center gap-1 p-2 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix Streamer Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>.glass {
+    background: rgba(16, 23, 34, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1)
+    }
+.stream-bg {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuAPqWL2yi1XlZa-y28aQRxaQ0JH5Ecr8tRZLNjKHGYg-Jvj_ZM2OAYs8bS7yNXWXZCMJ0nDWrp0xpX-X9cWzZt0xZi-5izsWTO62Q1drrE3JlCd2T5Bcd9s6cw5VnEdfZU3lEP6HUG3yAxfOuTgEWgJvEhCx-efxK8ydIdiNbDzwBG44J9yLmfVfna7aKtWBeNu7t1MbfZgS018In17lL9bQGmfT6y-woceIcUIyh0xoV20VKXndSoboPxwQXckE59SHfUnxEkwnPTW);
+    background-size: cover;
+    background-position: center
+    }</style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-hidden h-screen">
+<!-- Camera Preview Background -->
+<div class="fixed inset-0 stream-bg z-0" data-alt="A high quality professional gaming room background"></div>
+<!-- Main UI Wrapper -->
+<div class="relative z-10 flex flex-col h-full max-w-lg mx-auto overflow-hidden">
+<!-- Top Metric Bar -->
+<header class="p-4 flex flex-col gap-3">
+<div class="flex items-center justify-between glass rounded-xl p-3">
+<div class="flex items-center gap-3">
+<div class="bg-primary/20 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary text-2xl">monetization_on</span>
+</div>
+<div>
+<p class="text-[10px] uppercase tracking-wider text-slate-400 font-bold">Current Earnings</p>
+<p class="text-xl font-bold leading-tight tabular-nums">12,450 <span class="text-xs text-primary">BobVix</span></p>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-red-500/20 px-3 py-1.5 rounded-full border border-red-500/30">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+</span>
+<span class="text-sm font-bold text-red-100">1.2k Live</span>
+</div>
+</div>
+<!-- Quick Creator Tools (Floating Side) -->
+<div class="flex gap-2 self-end">
+<button class="glass p-2.5 rounded-full hover:bg-white/10">
+<span class="material-symbols-outlined text-white">flip_camera_ios</span>
+</button>
+<button class="glass p-2.5 rounded-full hover:bg-white/10">
+<span class="material-symbols-outlined text-white">face_6</span>
+</button>
+<button class="glass p-2.5 rounded-full hover:bg-white/10">
+<span class="material-symbols-outlined text-white">mic</span>
+</button>
+</div>
+</header>
+<!-- Mid Section: Gift Notifications -->
+<div class="flex-1 p-4 flex flex-col justify-center pointer-events-none">
+<div class="space-y-3 max-w-[80%]">
+<!-- Gift Alert 1 -->
+<div class="flex items-center gap-3 glass bg-primary/20 border-primary/30 p-3 rounded-xl shadow-xl animate-bounce">
+<div class="h-10 w-10 rounded-lg bg-cover bg-center shrink-0 border border-white/20" data-alt="Illustration of a golden rocket gift icon" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMx-H2SwrtP0bLRhmz4-qB7ZaRTn_7Lk2HUyYKQlupBi4AthJXif6faNXD7Y3fQw73t4SBC4UeQ27WfjFduVedZfOOxzRUY1V4mlBl_23R8NLTv_5SRsRLMUV2Yua3de3qLtPMhKTZ0vTdQ-tNjzwe7aAKMHgr0rwL52GFRL0RRiW2R8o8eh0m1uuOQlsltlYL59Put6CQwv5PvissJXorH11bAL-EJeZerHTP4eT_u3EnQp0WsJDepBXqFkmwKTVWnZi5RRVKhquU');"></div>
+<div>
+<p class="text-xs text-primary font-bold">USER_404 sent a Rocket!</p>
+<p class="text-sm font-bold text-white">+500 BobVix Coins</p>
+</div>
+</div>
+<!-- Gift Alert 2 (Faded) -->
+<div class="flex items-center gap-3 glass bg-white/5 border-white/10 p-2 rounded-lg opacity-80 scale-95 origin-left">
+<div class="h-8 w-8 rounded-lg bg-cover bg-center shrink-0" data-alt="Colorful party popper gift icon" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAcjx1IFPi_2JhAWBhnLdw04XoitTPCTvRhi2hNw_hFZayhZItrlbYbP8_SskZjEhur8lPhSS4wGiZwgYvJA-verRZwenHTRQSwqIOQqbLTFYAvwOl4aLcNDR3I6RDoY8n3qTpsA9mWmmTmh9VK2RMrZZHfxbveKG0MWo317ReEieBMgKE6CUkEa0HxIMFiC3S8N4shAf2Yl_8eiVBoVGJsTUbGBpee6oB5w4OmqcbKAtIyl7YztajoNIDBQr4rAnPlvxaYbgcnIeTU');"></div>
+<div>
+<p class="text-[10px] text-slate-300">Sarah_Bae sent Party Poppers</p>
+<p class="text-xs font-bold text-white">+50 BobVix</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Controls -->
+<footer class="p-4 space-y-4">
+<!-- Chat Moderation Panel -->
+<div class="glass rounded-xl flex flex-col h-64 overflow-hidden border-white/5">
+<div class="p-2 border-b border-white/10 bg-white/5 flex items-center justify-between">
+<span class="text-[10px] font-bold uppercase tracking-widest text-slate-400 px-2">Live Chat Moderation</span>
+<span class="material-symbols-outlined text-slate-400 text-lg cursor-pointer">settings</span>
+</div>
+<div class="flex-1 overflow-y-auto p-3 space-y-3 scroll-smooth">
+<!-- Chat Message 1 -->
+<div class="flex items-start gap-2 group">
+<div class="h-8 w-8 rounded-full bg-cover bg-center shrink-0" data-alt="Male user avatar profile photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDUMFupHub35Tub1abtY-2CiFCgAXt5Gy3Aq9L8-s333svZqjf0cH5xzembR0zSVIgZyf4-s9BlL4O8hPJ9nvWsSWeUbwLb2iAda6nhfMW_tUf6_tPkjqaO8zdOrzkJtQjTIEqlvH5Hq8ZdcloR-gjHbUSR84PKLj_aFnaaY3x2DX7ucs1Hhy0UdO1OtDQrSspO2IEBAN48eWfWAr9DO_0YQF-r2YLA6JFk5MdNBkBEusAZjvQWxFvfgVjE2bvAHBwHWWjmKlR_34tq');"></div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-slate-300">Alex_Pro</span>
+<span class="text-[10px] text-slate-500">2m</span>
+</div>
+<p class="text-sm text-slate-100">Love the setup today! Keep it up! 🚀</p>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity flex gap-1">
+<button class="bg-slate-700 p-1 rounded hover:bg-red-500 transition-colors"><span class="material-symbols-outlined text-[14px]">block</span></button>
+<button class="bg-slate-700 p-1 rounded hover:bg-primary transition-colors"><span class="material-symbols-outlined text-[14px]">verified_user</span></button>
+</div>
+</div>
+<!-- Chat Message 2 -->
+<div class="flex items-start gap-2 group">
+<div class="h-8 w-8 rounded-full bg-cover bg-center shrink-0" data-alt="Female user avatar profile photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuATtfffgxSN6fZVlT26LrFkl1wq3PNqJIPAC_wQ2ozfw-Vm9ERGW8Tr44zRs9SXTB2dR1R_EO_Z3W7g6jfuax3R2PJJMJ2SizQ4oHSX8bohUgfac4L09wtY55F8l6RW6Hc_PysXkAYy5UWPC941UZMQpmhW4Y6YwECYCw8p8jfyNghFGqy4COK5WGXbp9cOn15mIR9avhu2O6dX5OYSMVCfhZkJFS8u1I4owe_Wfs8nBA2TjtkyjbCHkUSfk1zyviBoUS22Ja37a7qW');"></div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-primary">Sam_Stream</span>
+<span class="text-[10px] text-slate-500">1m</span>
+</div>
+<p class="text-sm text-slate-100">How do I join the co-host slot?</p>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity flex gap-1">
+<button class="bg-slate-700 p-1 rounded hover:bg-red-500 transition-colors"><span class="material-symbols-outlined text-[14px]">block</span></button>
+<button class="bg-slate-700 p-1 rounded hover:bg-primary transition-colors"><span class="material-symbols-outlined text-[14px]">verified_user</span></button>
+</div>
+</div>
+<!-- Chat Message 3 -->
+<div class="flex items-start gap-2 group bg-primary/10 p-2 rounded-lg -mx-1">
+<div class="h-8 w-8 rounded-full bg-cover bg-center shrink-0" data-alt="Male user avatar profile photo" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBskhfygzFEt1XAz7ZAQybZYJEEnybSJRJ6_YaNA8kyryDo1733r29NNExD4oxqipgyhqNUH5jsLaULzQ6--0mE3kFA8jm0kr7P5WqWY7tsLUtosSbZg4Jh4gp-akvevgJU7UgRgcoP2gm_BDvB2QKVIRypQTK0IurdB78EaNow5_Bpw-X0LlBQcoZ9WLuC14B0I9wO1r0lgu8QikurQYxDcvn2JzU87w-jiZD4AcmvItCZMuxXg9VJhMRrAZnVn8cC2-4llWrSt1x6');"></div>
+<div class="flex-1">
+<div class="flex items-center gap-2">
+<span class="text-xs font-bold text-yellow-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px] fill-1">star</span>
+                                    VIP_Gamer
+                                </span>
+<span class="text-[10px] text-slate-500">Now</span>
+</div>
+<p class="text-sm text-slate-100 font-medium italic">Sent you a Super Chat: Let's do a squad stream!</p>
+</div>
+</div>
+</div>
+<div class="p-3 bg-white/5 border-t border-white/10 flex items-center gap-2">
+<input class="bg-transparent border-none focus:ring-0 text-sm flex-1 text-white placeholder:text-slate-500" placeholder="Send a message as streamer..." type="text"/>
+<button class="text-primary hover:text-white transition-colors">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+<!-- Primary Action Buttons -->
+<div class="flex gap-3">
+<button class="flex-1 bg-primary hover:bg-blue-600 text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 shadow-lg shadow-primary/20 transition-all active:scale-95">
+<span class="material-symbols-outlined">person_add</span>
+                    Invite Co-host
+                </button>
+<button class="bg-red-500/10 hover:bg-red-500 border border-red-500/30 text-red-500 hover:text-white px-6 py-4 rounded-xl font-bold transition-all active:scale-95">
+                    End Live
+                </button>
+</div>
+<!-- Safe Area Bottom Spacer -->
+<div class="h-2"></div>
+</footer>
+</div>
+<!-- Background Vignette Overlay -->
+<div class="fixed inset-0 pointer-events-none bg-gradient-to-b from-black/20 via-transparent to-black/60 z-[5]"></div>
+</body></html>

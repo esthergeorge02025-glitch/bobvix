@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix Earnings Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen pb-24">
+<!-- Header -->
+<header class="flex items-center justify-between p-4 sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full border-2 border-primary/30 p-0.5">
+<img alt="User Profile" class="w-full h-full rounded-full object-cover" data-alt="User profile avatar photo" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCU5FWedg4CvOxllkVB609HqAIvhNU0ecF4_D8hVC3TPkoAT5O15rgojRfi-6t47fkhHKRtdO4cxR-jFDLlrlEOetuII76-33msbgpyFcjPB-SAUg5EpKjferWUNet6DLtQ0KQdRSoac320Ky3R6rq8tebyPm3z0An6pr_xF2adAUsM8ntWkq4U0mK5hNH3v0CNsO2AnOGpxeZY4m_Nuv5QENdBiorLqjCBMOZOP2b0d30ZzCGWDT61qrJiE_N6aWvZMTQQyDnkzo9P"/>
+</div>
+<div>
+<p class="text-xs text-slate-500 dark:text-slate-400 font-medium">Welcome back,</p>
+<h1 class="text-sm font-bold">Alex Rivers</h1>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="size-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-xl">notifications</span>
+</button>
+<button class="size-10 flex items-center justify-center rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300">
+<span class="material-symbols-outlined text-xl">settings</span>
+</button>
+</div>
+</header>
+<main class="px-4 space-y-6">
+<!-- Total Balance Hero -->
+<section class="relative overflow-hidden rounded-xl p-6 bg-gradient-to-br from-primary to-blue-700 text-white shadow-xl shadow-primary/20">
+<div class="absolute -right-8 -top-8 size-40 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-4">
+<div class="flex items-center gap-2">
+<div class="size-8 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-lg">currency_bitcoin</span>
+</div>
+<span class="text-sm font-medium opacity-90 uppercase tracking-wider">BobVix Balance</span>
+</div>
+<div class="bg-emerald-400/20 text-emerald-300 px-2 py-1 rounded-lg text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">trending_up</span> +2.4%
+                    </div>
+</div>
+<div class="space-y-1">
+<h2 class="text-4xl font-bold tracking-tight">12,450.00 <span class="text-xl font-medium opacity-70">BVX</span></h2>
+<p class="text-lg font-medium opacity-80">≈ $1,245.00 USD</p>
+</div>
+</div>
+</section>
+<!-- Earnings Breakdown Grid -->
+<section>
+<h3 class="text-lg font-bold mb-3 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">analytics</span>
+                Revenue Streams
+            </h3>
+<div class="grid grid-cols-2 gap-3">
+<!-- Live -->
+<div class="glass-card p-4 rounded-xl flex flex-col gap-3">
+<div class="size-10 rounded-lg bg-orange-500/20 text-orange-500 flex items-center justify-center">
+<span class="material-symbols-outlined">live_tv</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Live Stream</p>
+<p class="text-lg font-bold">$4,200.00</p>
+</div>
+</div>
+<!-- Shorts -->
+<div class="glass-card p-4 rounded-xl flex flex-col gap-3">
+<div class="size-10 rounded-lg bg-pink-500/20 text-pink-500 flex items-center justify-center">
+<span class="material-symbols-outlined">play_circle</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Shorts</p>
+<p class="text-lg font-bold">$3,150.00</p>
+</div>
+</div>
+<!-- Ads -->
+<div class="glass-card p-4 rounded-xl flex flex-col gap-3">
+<div class="size-10 rounded-lg bg-emerald-500/20 text-emerald-500 flex items-center justify-center">
+<span class="material-symbols-outlined">ad_units</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Ad Revenue</p>
+<p class="text-lg font-bold">$2,800.00</p>
+</div>
+</div>
+<!-- Gifts -->
+<div class="glass-card p-4 rounded-xl flex flex-col gap-3">
+<div class="size-10 rounded-lg bg-purple-500/20 text-purple-500 flex items-center justify-center">
+<span class="material-symbols-outlined">redeem</span>
+</div>
+<div>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium">Fan Gifts</p>
+<p class="text-lg font-bold">$2,300.00</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Performance Chart Placeholder -->
+<section class="glass-card p-5 rounded-xl">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-bold">Performance</h3>
+<div class="flex bg-slate-200 dark:bg-slate-800 p-1 rounded-lg">
+<button class="px-3 py-1 text-xs font-bold rounded-md bg-white dark:bg-slate-700 shadow-sm">Week</button>
+<button class="px-3 py-1 text-xs font-bold text-slate-500">Month</button>
+</div>
+</div>
+<div class="h-32 w-full relative">
+<svg class="w-full h-full" viewbox="0 0 400 100">
+<defs>
+<lineargradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#3c83f6" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#3c83f6" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+<path d="M0,80 Q50,20 100,50 T200,30 T300,60 T400,10 L400,100 L0,100 Z" fill="url(#gradient)"></path>
+<path d="M0,80 Q50,20 100,50 T200,30 T300,60 T400,10" fill="none" stroke="#3c83f6" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+<div class="flex justify-between mt-2 text-[10px] text-slate-500 font-medium uppercase tracking-tighter">
+<span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+</div>
+</div>
+</section>
+<!-- Quick Actions -->
+<section class="grid grid-cols-1 gap-3">
+<button class="w-full h-14 bg-primary hover:bg-primary/90 text-white rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+                Withdraw to Binance
+            </button>
+<button class="w-full h-14 bg-primary/10 border border-primary/20 text-primary rounded-xl font-bold flex items-center justify-center gap-2 transition-all active:scale-[0.98]">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+                Connect Wallet
+            </button>
+</section>
+<!-- Transaction History -->
+<section>
+<div class="flex items-center justify-between mb-4">
+<h3 class="text-lg font-bold">Transaction History</h3>
+<button class="text-primary text-sm font-bold">See All</button>
+</div>
+<div class="space-y-3">
+<!-- Transaction Item -->
+<div class="flex items-center justify-between p-3 glass-card rounded-lg">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-emerald-500/10 text-emerald-500 flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_downward</span>
+</div>
+<div>
+<p class="font-bold text-sm">Payout Received</p>
+<p class="text-xs text-slate-500">Oct 24, 2023 • 14:20</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-emerald-500">+$450.00</p>
+<p class="text-[10px] uppercase font-bold text-slate-500">Completed</p>
+</div>
+</div>
+<!-- Transaction Item -->
+<div class="flex items-center justify-between p-3 glass-card rounded-lg">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-primary/10 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<div>
+<p class="font-bold text-sm">Binance Withdrawal</p>
+<p class="text-xs text-slate-500">Oct 22, 2023 • 09:15</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-slate-100">-$1,200.00</p>
+<p class="text-[10px] uppercase font-bold text-slate-500">Completed</p>
+</div>
+</div>
+<!-- Transaction Item -->
+<div class="flex items-center justify-between p-3 glass-card rounded-lg opacity-80">
+<div class="flex items-center gap-3">
+<div class="size-10 rounded-full bg-amber-500/10 text-amber-500 flex items-center justify-center">
+<span class="material-symbols-outlined">hourglass_empty</span>
+</div>
+<div>
+<p class="font-bold text-sm">Gift Processing</p>
+<p class="text-xs text-slate-500">Oct 21, 2023 • 23:45</p>
+</div>
+</div>
+<div class="text-right">
+<p class="font-bold text-amber-500">+$120.00</p>
+<p class="text-[10px] uppercase font-bold text-amber-500">Pending</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 z-50 bg-background-light dark:bg-background-dark/90 backdrop-blur-xl border-t border-slate-200 dark:border-slate-800 px-6 py-3">
+<div class="flex items-center justify-between max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">pie_chart</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Earnings</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">monitoring</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Analytics</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold uppercase tracking-widest">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix Public Profile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,FILL@0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-tab {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Sticky Header -->
+<header class="sticky top-0 z-50 glass-tab px-4 py-3 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">arrow_back</span>
+<div class="flex items-center gap-1">
+<h1 class="font-bold text-lg tracking-tight">BobVix</h1>
+<span class="material-symbols-outlined text-primary text-[18px] fill-1">verified</span>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">notifications</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">more_vert</span>
+</div>
+</header>
+<main class="flex-1 overflow-y-auto pb-24">
+<!-- Profile Info Section -->
+<section class="px-6 pt-6 pb-4">
+<div class="flex flex-col items-center gap-4">
+<div class="relative">
+<div class="size-32 rounded-full p-1 bg-gradient-to-tr from-primary to-blue-400">
+<img class="size-full rounded-full object-cover border-4 border-background-dark" data-alt="Professional portrait of a male content creator" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALsRg32rbitW1ZgqE6yDwqf46L1SQ-lGsJc--GOI_pYUTxBwC9AsOzEB5yiTXqLi6LAcHrZVqmjTgFkVwMu-gFkVKijUfBkfyJXv3DJKWcqhvhBEpieGztr4mAF2Yko-2rBRUaAInLlirUGWE1IsOC_Dq-G-IxWM0ek3UW23VcnE9PANTzzs1Ik5gzI3omsTG9EmBLr5PlMyQnHCohI1vtkG7B95TLg-YYUdQsWXD1PEzro6YZQj6SupMm7HJroDj8iIW8jatozMS-"/>
+</div>
+<div class="absolute bottom-1 right-1 bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded-full border-2 border-background-dark">LIVE</div>
+</div>
+<div class="text-center space-y-1">
+<h2 class="text-2xl font-bold">Bob Vix</h2>
+<p class="text-slate-400 text-sm">@bobvix_official</p>
+<p class="text-slate-300 text-sm mt-3 max-w-xs mx-auto">Building the future of tech. Daily coding streams and AI tutorials. 🚀</p>
+</div>
+<!-- Action Buttons -->
+<div class="flex gap-3 w-full max-w-sm mt-2">
+<button class="flex-1 bg-primary hover:bg-primary/90 text-white font-bold py-2.5 rounded-lg transition-all">
+                        Follow
+                    </button>
+<button class="px-4 bg-slate-800 hover:bg-slate-700 text-white font-bold py-2.5 rounded-lg transition-all flex items-center justify-center">
+<span class="material-symbols-outlined">edit</span>
+</button>
+<button class="px-4 bg-slate-800 hover:bg-slate-700 text-white font-bold py-2.5 rounded-lg transition-all flex items-center justify-center">
+<span class="material-symbols-outlined">share</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Stats Grid -->
+<section class="px-6 py-4">
+<div class="grid grid-cols-3 gap-4 bg-slate-800/30 rounded-xl p-4 border border-white/5">
+<div class="text-center">
+<p class="text-xl font-bold">1.2M</p>
+<p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Followers</p>
+</div>
+<div class="text-center border-x border-white/10">
+<p class="text-xl font-bold">850</p>
+<p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Following</p>
+</div>
+<div class="text-center">
+<p class="text-xl font-bold">45.8M</p>
+<p class="text-xs text-slate-400 uppercase tracking-widest mt-1">Likes</p>
+</div>
+</div>
+</section>
+<!-- Glassmorphism Tabs -->
+<nav class="sticky top-[60px] z-40 glass-tab mt-4 mx-4 rounded-xl flex p-1">
+<button class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg bg-primary text-white font-medium transition-all">
+<span class="material-symbols-outlined text-sm">play_circle</span>
+                Shorts
+            </button>
+<button class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg text-slate-400 hover:text-slate-200 font-medium transition-all">
+<span class="material-symbols-outlined text-sm">history</span>
+                Live History
+            </button>
+</nav>
+<!-- Shorts Grid -->
+<section class="grid grid-cols-3 gap-1 px-4 mt-6">
+<!-- Short Item -->
+<div class="aspect-[9/16] relative bg-slate-800 rounded-lg overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Code editor background with neon lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYVy3Z09bH-ij56-rTONMgOw4YEJXl8K97vWMJsIZ0-V57coM8ibeT4MvzcfEsi832qlpnzlA8jbMPyyDu3EWhUzDhPJbp6lonNXux6XF2SSfIb6UppNuouU54UQYR0biSCKAcDPi7Wn0nS4nD1N9FMrZCjU-d6vJhkGsUubgaZO8-xYY-Jn-Qe7Hls5fi1ugEqyzYJPxuWj7jDXg6HgbJYB68a0Uv5sKKzqVOXV1SCOiXZV3qTiWjf1y0-Csx5z3rN1qqz6o-WtS9"/>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 text-white text-[10px] font-bold drop-shadow-md">
+<span class="material-symbols-outlined text-xs">play_arrow</span>
+                    245K
+                </div>
+</div>
+<!-- Short Item -->
+<div class="aspect-[9/16] relative bg-slate-800 rounded-lg overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Digital motherboard visualization with blue glowing circuits" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpLswaAXogb8ByJ-9W7_BO72s8QZ2Ui6sdeEZIQm2KdXfZdECaQmNyBflRy3MNePjzXicn0BplOupXmfpwXtN20Ryw3bVOlRyZ8I93l8KNizP2yrcBm3bvOvuO8erZseUakneuAU_JOxcMBmlN_MGp5aVRSGbvAokdEH5VkF48wAqjpBBUixnwbkLhzl4wB6fLQ4dKEIlyIIM_zIcYgQyY1KTpq1sGpe6jGPF1O9n3x2x7u214JvHzAWJWFMgsJ3gW7DJ3AxZ0L6le"/>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 text-white text-[10px] font-bold drop-shadow-md">
+<span class="material-symbols-outlined text-xs">play_arrow</span>
+                    1.2M
+                </div>
+</div>
+<!-- Short Item -->
+<div class="aspect-[9/16] relative bg-slate-800 rounded-lg overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Laptop screen showing complex algorithms" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0gH-RSzUIg3cpFch3PfbZj783DbnHMqN-4hQR4RkSK9sZTkPvrYfDIqxCdXc5TjoAxe3ojksHj5QyPRntLVrg6jKIQ_MDuzys2OtzYJuMHocYcaR_NVXEhjACLnhmO3kjS_quDHn1CKyy7Z_tieDK0rnDR4B0PoNk0jz_yAAcypVk8ICQ9l8UGZhWZANqlb-7ccwlFZcGqZCgFRe41Zi2Jl8pU07F1cSs5mFQSXgw0eHysOaHb6H6_vdj-QNK522-FxL3yCXWzNIO"/>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 text-white text-[10px] font-bold drop-shadow-md">
+<span class="material-symbols-outlined text-xs">play_arrow</span>
+                    890K
+                </div>
+</div>
+<!-- Repeat Items for Grid Depth -->
+<div class="aspect-[9/16] relative bg-slate-800 rounded-lg overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Minimalist workspace setup with multiple monitors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzZEp7OyXsgYZzGbkDMS593VEBJ9c8vDucko1CkTnuKdvFeI4cvwZpDcqHUDvQRKqZhvHYk12PnXvNwSxwXTyWxYYPdn6yMKU6-_JFhwduHDyDm3CTyObuOsp7UzI7IpDYgs_GMWxHUftJ6trmM1oW4w3NsChH54l8VWx-q1YkcopkFXJSkYrL766HDwUF2jtCNwk0FXWSZelip35_HyKH5-655ltJlYbXOXj-Ov8GzY8UzFh1vuC_cwHICtS6VJfodBK62YNm2Zzp"/>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 text-white text-[10px] font-bold drop-shadow-md">
+<span class="material-symbols-outlined text-xs">play_arrow</span>
+                    55K
+                </div>
+</div>
+<div class="aspect-[9/16] relative bg-slate-800 rounded-lg overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Abstract robotic arm performing precision tasks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7akzezAUdnnDoaaICDqrU-eGCUYrV8qNQ_glcvJOIWAguYemrScRt1D_WZ0zfIBxgfcb5DSaI8IzS30fEjoV5GfuxApeCTCuXzxHhHtbgT3RZyWNfGDn9BsZLq1_Xi8aDQhvZdgUagE03CwgBlml4J68mYuMI7ot8ncZtTb8-ALwGyCjjZVkUzZrHrT0jxbCWTjqD_CAY-3HKNNLmMNuvm-fdMUV1anFGYg3yzhb_hpPf9eiC8jTXTAzYeKFMdWZKPBnzM0McpVJZ"/>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 text-white text-[10px] font-bold drop-shadow-md">
+<span class="material-symbols-outlined text-xs">play_arrow</span>
+                    102K
+                </div>
+</div>
+<div class="aspect-[9/16] relative bg-slate-800 rounded-lg overflow-hidden group cursor-pointer">
+<img class="w-full h-full object-cover transition-transform group-hover:scale-105" data-alt="Technological abstract background with light trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2UawQfuBa9vTtwSXOo95OhBHWqKSxwAaTAcA-7d8dFBgkI5fJ3JUeX75sjo7Pqe44CqS8bgXaBDVldZDelQuLQy0P-2jLwGYvLbHlLqmsUe_Cd-CXQSEoPvUVxGVL7MjxOlsg6kJYS5o-uzvEH6YODdqTSd4jmqD4T5Se-UzK2n_8ocdEQkmtKW5jMt2VXmhwo7qW_9eAHO0AmH9QnCInx9cskkS5Iu4EGw1AK8tkEmqki60kgNCVNXym8gMaiGu3dwnNn7K7FCu9"/>
+<div class="absolute bottom-2 left-2 flex items-center gap-1 text-white text-[10px] font-bold drop-shadow-md">
+<span class="material-symbols-outlined text-xs">play_arrow</span>
+                    314K
+                </div>
+</div>
+</section>
+<!-- Live History (Hidden by Default in static preview, but designed here) -->
+<section class="hidden px-6 mt-6 space-y-4">
+<div class="flex gap-4 bg-slate-800/20 p-3 rounded-xl border border-white/5 hover:border-primary/50 transition-colors cursor-pointer">
+<div class="w-24 h-16 bg-slate-700 rounded-lg overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="Code on a computer monitor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe_VssJZ-H9Nufu3WNcUd9kWI_ur2vF_kIo2nwvHbSxR4gyHH45MvZvMA2hzW9DpUX_mIy476EvkS_dfVYMCKrHop-0375D9nwNAszsTCmiSEwYSq2ZrORMQMKn5dVRAy-FcTbUX59qLAsv9f7ccfe8SF3kqFcGfk7nGl65Jjg0AUr0p2V_ZSkQh3ne4L48gm0enrQb1h-a49WjBDyWu6NeqQL9fSltGZCsl3jSfv6AhqEmicmdXf-LvyrWVpptIqbhtGuGdpuWWzd"/>
+</div>
+<div class="flex flex-col justify-between">
+<h3 class="font-bold text-sm leading-tight">Midnight Coding: Building an AI App from scratch</h3>
+<p class="text-[10px] text-slate-500">Oct 24, 2023 • 2h 15m • 12K Views</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full glass-tab border-t border-white/5 px-4 pb-6 pt-2 flex items-center justify-between">
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-medium">Discover</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1" href="#">
+<div class="bg-primary size-10 rounded-full flex items-center justify-center text-white shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined">add</span>
+</div>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">mail</span>
+<span class="text-[10px] font-medium">Inbox</span>
+</a>
+<a class="flex flex-1 flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined fill-1">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</nav>
+<!-- Floating Quick Actions (Owner only) -->
+<button class="fixed right-6 bottom-28 size-14 bg-primary text-white rounded-full flex items-center justify-center shadow-2xl shadow-primary/40 active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined text-3xl">videocam</span>
+</button>
+</body></html>

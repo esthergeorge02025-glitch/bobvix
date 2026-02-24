@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix Shorts - Upload</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .video-gradient {
+            background: linear-gradient(0deg, rgba(16, 23, 34, 1) 0%, rgba(16, 23, 34, 0.4) 50%, rgba(16, 23, 34, 0.2) 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased overflow-x-hidden">
+<div class="relative flex min-h-screen w-full max-w-md mx-auto flex-col bg-background-light dark:bg-background-dark overflow-hidden shadow-2xl">
+<!-- Video Preview Background -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-slate-800 relative">
+<img class="w-full h-full object-cover opacity-60" data-alt="A dynamic vertical cinematic short video frame preview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNzQCTGSmvS8QSsErMKRa40SjeOZklh2jZKJND6kivzwYd8r21zq9qRQCrjkcQ4aAUoFod-haPb-TZpfd3_jT-TOnVVzlxi8m0leHsLHO6CrX2SeR8NvvZtKFXFRQdm5qfsh5WTqdYSucycPNZ5AUYKVwEicsWUkbfBq1GWorimPrMZyfH8kqWCgQh5CoqbhHoYE-5VgxujcP5eIHcNa15dLrGVRB55vwrc5MKQRVO3-q7q4eMkDsBlA2P-EorZSK_NZfxe8LAXOUg"/>
+<div class="absolute inset-0 video-gradient"></div>
+</div>
+</div>
+<!-- Top Navigation -->
+<header class="relative z-10 flex items-center justify-between px-6 py-4">
+<button class="flex items-center justify-center p-2 rounded-full bg-white/10 backdrop-blur-md text-slate-100 border border-white/10 hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight text-white drop-shadow-md">Upload Short</h1>
+<button class="flex items-center gap-1 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md text-slate-100 border border-white/10 hover:bg-white/20 transition-all">
+<span class="material-symbols-outlined text-sm">inventory_2</span>
+<span class="text-sm font-semibold">Drafts</span>
+</button>
+</header>
+<!-- Main Content Area -->
+<main class="relative z-10 flex-1 flex flex-col justify-end p-4 pb-24">
+<!-- Glass Control Panel -->
+<div class="glass-panel rounded-xl p-5 space-y-5">
+<!-- Caption Input -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="text-sm font-medium text-slate-300 ml-1">Caption</label>
+<span class="text-[10px] text-slate-400 uppercase tracking-widest">0 / 2200</span>
+</div>
+<textarea class="w-full bg-white/5 border border-white/10 rounded-lg p-4 text-slate-100 placeholder:text-slate-500 focus:ring-2 focus:ring-primary focus:border-transparent resize-none transition-all h-28" placeholder="Write a catchy caption..."></textarea>
+</div>
+<!-- Hashtags Input -->
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-300 ml-1">Hashtags</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-4 text-primary text-xl">tag</span>
+<input class="w-full bg-white/5 border border-white/10 rounded-lg py-3 pl-12 pr-4 text-slate-100 placeholder:text-slate-500 focus:ring-2 focus:ring-primary focus:border-transparent transition-all" placeholder="trending, bobvix, lifestyle..." type="text"/>
+</div>
+<div class="flex gap-2 flex-wrap mt-2">
+<span class="px-3 py-1 bg-primary/20 text-primary text-xs rounded-full border border-primary/30 font-medium cursor-pointer">#foryou</span>
+<span class="px-3 py-1 bg-white/5 text-slate-300 text-xs rounded-full border border-white/10 font-medium cursor-pointer">#vlog</span>
+<span class="px-3 py-1 bg-white/5 text-slate-300 text-xs rounded-full border border-white/10 font-medium cursor-pointer">#shorts</span>
+</div>
+</div>
+<!-- Privacy Selector -->
+<div class="space-y-2">
+<label class="text-sm font-medium text-slate-300 ml-1">Who can see this?</label>
+<div class="flex bg-white/5 border border-white/10 rounded-lg p-1">
+<button class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-md bg-primary text-white font-semibold transition-all">
+<span class="material-symbols-outlined text-sm">public</span>
+<span class="text-xs">Public</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-md text-slate-400 font-medium hover:text-slate-200 transition-all">
+<span class="material-symbols-outlined text-sm">group</span>
+<span class="text-xs">Friends</span>
+</button>
+<button class="flex-1 flex items-center justify-center gap-2 py-2 px-3 rounded-md text-slate-400 font-medium hover:text-slate-200 transition-all">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="text-xs">Only Me</span>
+</button>
+</div>
+</div>
+<!-- Toggle Settings -->
+<div class="flex items-center justify-between px-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-slate-400">download</span>
+<span class="text-sm text-slate-300">Save to device</span>
+</div>
+<button class="w-10 h-5 bg-primary rounded-full relative">
+<span class="absolute right-0.5 top-0.5 w-4 h-4 bg-white rounded-full shadow-sm"></span>
+</button>
+</div>
+</div>
+</main>
+<!-- Bottom Actions -->
+<footer class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md p-4 bg-background-dark/80 backdrop-blur-xl border-t border-white/5 z-20">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 rounded-lg flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(60,131,246,0.4)] transition-all active:scale-95">
+<span class="material-symbols-outlined">send</span>
+                POST VIDEO
+            </button>
+</footer>
+<!-- Bottom Nav Simulation (Minimized) -->
+<div class="relative z-10 flex gap-2 border-t border-white/5 bg-background-dark/95 px-4 pb-3 pt-2">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">explore</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Discover</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1">add_circle</span>
+<p class="text-[10px] font-bold uppercase tracking-wider">Upload</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">chat</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Inbox</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-500" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<p class="text-[10px] font-medium uppercase tracking-wider">Profile</p>
+</a>
+</div>
+</div>
+</body></html>

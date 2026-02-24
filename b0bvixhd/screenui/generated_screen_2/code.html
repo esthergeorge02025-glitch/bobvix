@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix Glassmorphism Architecture</title>
+<!-- Tailwind CSS v3 with plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Space Grotesk -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Space Grotesk', 'sans-serif'],
+          },
+          colors: {
+            bobvix: {
+              dark: '#0E0E10',
+              electric: '#3B82F6',
+              border: 'rgba(255, 255, 255, 0.1)',
+              surface: 'rgba(14, 14, 16, 0.6)',
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-animations">
+    @keyframes float {
+      0% { transform: translateY(0px) rotateX(45deg) rotateZ(-10deg); }
+      50% { transform: translateY(-10px) rotateX(45deg) rotateZ(-10deg); }
+      100% { transform: translateY(0px) rotateX(45deg) rotateZ(-10deg); }
+    }
+    .layer-stack {
+      perspective: 1000px;
+    }
+    .layer-item {
+      transform: rotateX(45deg) rotateZ(-10deg);
+      transition: all 0.5s ease;
+    }
+    .layer-item:hover {
+      transform: rotateX(45deg) rotateZ(-10deg) translateZ(20px);
+    }
+  </style>
+</head>
+<body class="bg-bobvix-dark text-white font-sans min-h-screen p-6 overflow-x-hidden">
+<!-- BEGIN: HeaderSection -->
+<header class="mb-12" data-purpose="screen-header">
+<div class="flex items-center gap-2 mb-2">
+<div class="h-1 w-8 bg-bobvix-electric rounded-full"></div>
+<span class="text-bobvix-electric text-xs font-bold tracking-widest uppercase">BobVix Design System</span>
+</div>
+<h1 class="text-3xl font-bold mb-3 tracking-tight">Glassmorphism Architecture</h1>
+<p class="text-gray-400 text-sm leading-relaxed max-w-sm">
+      A technical breakdown of our signature UI component layering. Achieving depth through transparency and diffusion.
+    </p>
+</header>
+<!-- END: HeaderSection -->
+<!-- BEGIN: ExplodedViewSection -->
+<section class="mb-16 relative py-10" data-purpose="technical-diagram">
+<div class="layer-stack flex flex-col items-center gap-[-40px]">
+<!-- Layer 5: Content -->
+<div class="layer-item w-64 h-40 bg-transparent border-2 border-dashed border-bobvix-electric/30 rounded-xl z-50 flex flex-col justify-center items-center p-4 shadow-2xl" style="margin-top: -60px;">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 rounded-full bg-bobvix-electric/20 flex items-center justify-center">
+<svg class="w-4 h-4 text-bobvix-electric" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div class="h-2 w-20 bg-white/40 rounded"></div>
+</div>
+<div class="h-2 w-32 bg-white/20 rounded"></div>
+<div class="absolute -right-24 top-1/2 -translate-y-1/2 text-[10px] text-bobvix-electric font-mono">
+          LAYER 5: CONTENT
+        </div>
+</div>
+<!-- Layer 4: Border -->
+<div class="layer-item w-64 h-40 border border-white/20 rounded-xl z-40 bg-transparent" style="margin-top: -120px;">
+<div class="absolute -right-24 top-1/2 -translate-y-1/2 text-[10px] text-gray-400 font-mono">
+          LAYER 4: BORDER (1px)
+        </div>
+</div>
+<!-- Layer 3: Fill -->
+<div class="layer-item w-64 h-40 bg-bobvix-surface rounded-xl z-30" style="margin-top: -120px;">
+<div class="absolute -right-24 top-1/2 -translate-y-1/2 text-[10px] text-gray-400 font-mono">
+          LAYER 3: FILL (60%)
+        </div>
+</div>
+<!-- Layer 2: Backdrop Filter -->
+<div class="layer-item w-64 h-40 bg-white/5 rounded-xl z-20" style="margin-top: -120px; backdrop-filter: blur(8px);">
+<div class="absolute -right-24 top-1/2 -translate-y-1/2 text-[10px] text-gray-400 font-mono">
+          LAYER 2: BLUR (20px)
+        </div>
+</div>
+<!-- Layer 1: Background -->
+<div class="layer-item w-64 h-40 rounded-xl z-10 overflow-hidden" style="margin-top: -120px;">
+<img alt="Base Layer" class="w-full h-full object-cover opacity-50" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMKmEP685qgPjuatJnV1bLbeWN5LFXouwVuUaM2CHb4vEmFN1WYjwh_-fS5G5WpKxj7HqKUE0pT24PIreZB2_LGB2JeuqUrkUi2IAKJ9G_mkLe1-AHzT3KM_sbQzOaoL7_nEveFHbJ3VV07tZyHT76PGPlwLsFU0EEuU8OAhH0fM-SAAZCpVLpeppa0dhapaMhbU5nIiF-gxiBBomp8xbfDc1FF3uiiXRXBxNB0dpWl99DPdj0gXmKghAaKfHyBgV_tuzpg8QiBWOs"/>
+<div class="absolute -right-24 top-1/2 -translate-y-1/2 text-[10px] text-gray-400 font-mono">
+          LAYER 1: BG
+        </div>
+</div>
+</div>
+</section>
+<!-- END: ExplodedViewSection -->
+<!-- BEGIN: LivePreviewSection -->
+<section class="space-y-6" data-purpose="live-preview-and-code">
+<h2 class="text-xs font-bold text-gray-500 uppercase tracking-[0.2em]">Live Preview &amp; Code</h2>
+<!-- Preview Card -->
+<div class="relative h-48 w-full rounded-2xl overflow-hidden flex items-center justify-center border border-white/5">
+<!-- Simulated Background Image -->
+<div class="absolute inset-0 bg-gradient-to-br from-blue-900 via-bobvix-dark to-purple-900 opacity-80"></div>
+<div class="absolute top-10 left-10 w-20 h-20 bg-bobvix-electric rounded-full blur-3xl opacity-40"></div>
+<!-- The Glass Card -->
+<div class="relative z-10 p-6 rounded-2xl border border-white/10 shadow-2xl" style="background: rgba(14, 14, 16, 0.6); backdrop-filter: blur(20px);">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-bobvix-electric flex items-center justify-center shadow-lg shadow-bobvix-electric/20">
+<svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04M12 10a2 2 0 110-4 2 2 0 010 4z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+<div>
+<h3 class="font-bold text-white">System Verified</h3>
+<p class="text-xs text-white/60">Architecture stable v2.4.0</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Code Snippet -->
+<div class="bg-[#16161a] rounded-xl p-4 border border-white/5 font-mono text-[11px] leading-relaxed">
+<div class="flex items-center justify-between mb-3 border-b border-white/5 pb-2">
+<span class="text-gray-500 italic">style.css</span>
+<span class="text-bobvix-electric">CSS3</span>
+</div>
+<div class="space-y-1">
+<p><span class="text-purple-400">.glass-card</span> {</p>
+<p class="pl-4"><span class="text-blue-300">backdrop-filter</span>: <span class="text-orange-300">blur(20px)</span>;</p>
+<p class="pl-4"><span class="text-blue-300">background</span>: <span class="text-orange-300">rgba(14, 14, 16, 0.6)</span>;</p>
+<p class="pl-4"><span class="text-blue-300">border</span>: <span class="text-orange-300">1px solid rgba(255, 255, 255, 0.1)</span>;</p>
+<p class="pl-4"><span class="text-blue-300">border-radius</span>: <span class="text-orange-300">16px</span>;</p>
+<p>}</p>
+</div>
+</div>
+</section>
+<!-- END: LivePreviewSection -->
+<!-- BEGIN: Footer -->
+<footer class="mt-12 text-center" data-purpose="page-footer">
+<p class="text-[10px] text-gray-600 uppercase tracking-widest">© 2024 BobVix Interactive Core</p>
+</footer>
+<!-- END: Footer -->
+</body></html>

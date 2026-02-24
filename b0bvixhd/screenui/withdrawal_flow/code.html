@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix - Withdraw Funds</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(60, 131, 246, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-md mx-auto px-4 h-16 flex items-center justify-between">
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-lg font-bold tracking-tight">Withdraw Funds</h1>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</header>
+<main class="flex-1 max-w-md mx-auto w-full px-4 py-6 space-y-6">
+<!-- Balance Card -->
+<section class="relative overflow-hidden rounded-xl bg-primary p-6 text-white shadow-lg shadow-primary/20">
+<div class="absolute top-0 right-0 p-4 opacity-20">
+<span class="material-symbols-outlined text-6xl">account_balance_wallet</span>
+</div>
+<p class="text-sm font-medium opacity-80 mb-1">Total Available</p>
+<h2 class="text-3xl font-bold tracking-tight mb-4">$12,450.00</h2>
+<div class="flex items-center gap-2 text-xs bg-white/10 w-fit px-3 py-1.5 rounded-full border border-white/10">
+<span class="material-symbols-outlined text-sm">info</span>
+<span>Minimum withdrawal: $10.00</span>
+</div>
+</section>
+<!-- Withdrawal Form -->
+<section class="space-y-5">
+<!-- Amount Input -->
+<div class="space-y-2">
+<div class="flex justify-between items-center">
+<label class="text-sm font-semibold text-slate-600 dark:text-slate-400">Amount to Withdraw</label>
+<button class="text-primary text-xs font-bold hover:underline">USE MAX</button>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined">attach_money</span>
+</div>
+<input class="w-full h-14 pl-10 pr-4 bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-lg focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all outline-none text-lg font-bold" placeholder="0.00" type="number"/>
+</div>
+</div>
+<!-- Method Selector -->
+<div class="space-y-3">
+<label class="text-sm font-semibold text-slate-600 dark:text-slate-400">Select Method</label>
+<div class="grid grid-cols-1 gap-3">
+<!-- Binance Option -->
+<label class="relative flex items-center p-4 rounded-lg border-2 border-primary bg-primary/5 dark:bg-primary/10 cursor-pointer transition-all">
+<input checked="" class="hidden" name="method" type="radio"/>
+<div class="flex items-center gap-4 w-full">
+<div class="w-10 h-10 rounded-full bg-yellow-400/20 flex items-center justify-center text-yellow-500">
+<span class="material-symbols-outlined">currency_bitcoin</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-sm">Binance (Crypto)</p>
+<p class="text-xs text-slate-500">Instant • 0.5% Fee</p>
+</div>
+<span class="material-symbols-outlined text-primary">check_circle</span>
+</div>
+</label>
+<!-- Wallet Option -->
+<label class="relative flex items-center p-4 rounded-lg border-2 border-slate-200 dark:border-slate-800 hover:border-primary/50 cursor-pointer transition-all">
+<input class="hidden" name="method" type="radio"/>
+<div class="flex items-center gap-4 w-full">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-sm">External Wallet</p>
+<p class="text-xs text-slate-500">5-30 mins • Network Fee</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-700">radio_button_unchecked</span>
+</div>
+</label>
+<!-- Bank Option -->
+<label class="relative flex items-center p-4 rounded-lg border-2 border-slate-200 dark:border-slate-800 hover:border-primary/50 cursor-pointer transition-all">
+<input class="hidden" name="method" type="radio"/>
+<div class="flex items-center gap-4 w-full">
+<div class="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-500">
+<span class="material-symbols-outlined">account_balance</span>
+</div>
+<div class="flex-1">
+<p class="font-bold text-sm">Bank Transfer</p>
+<p class="text-xs text-slate-500">1-3 Days • No Fee</p>
+</div>
+<span class="material-symbols-outlined text-slate-300 dark:text-slate-700">radio_button_unchecked</span>
+</div>
+</label>
+</div>
+</div>
+</section>
+<!-- Action Button -->
+<section class="pt-4">
+<button class="w-full h-14 bg-primary text-white rounded-lg font-bold text-lg shadow-lg shadow-primary/30 flex items-center justify-center gap-3 active:scale-[0.98] transition-transform">
+<span>Withdraw Now</span>
+<span class="material-symbols-outlined animate-spin text-xl opacity-60">refresh</span>
+</button>
+<div class="flex items-center justify-center gap-2 mt-4 text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<p class="text-xs font-medium uppercase tracking-widest">Secure encrypted transaction</p>
+</div>
+</section>
+<!-- Recent Activity -->
+<section class="space-y-4 pt-4">
+<div class="flex items-center justify-between">
+<h3 class="font-bold text-slate-900 dark:text-slate-100">Recent Activity</h3>
+<button class="text-primary text-sm font-semibold">View All</button>
+</div>
+<div class="space-y-3">
+<!-- Activity Item 1 -->
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-500">
+<span class="material-symbols-outlined">hourglass_empty</span>
+</div>
+<div>
+<p class="text-sm font-bold">Binance Withdrawal</p>
+<p class="text-xs text-slate-500">Oct 24, 2023 • 14:20</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold">-$2,500.00</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-amber-500/10 text-amber-500 uppercase tracking-tighter">Pending</span>
+</div>
+</div>
+<!-- Activity Item 2 -->
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-bold">Bank Transfer</p>
+<p class="text-xs text-slate-500">Oct 20, 2023 • 09:15</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold">-$1,200.00</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-500 uppercase tracking-tighter">Completed</span>
+</div>
+</div>
+<!-- Activity Item 3 -->
+<div class="flex items-center justify-between p-4 bg-slate-100 dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+<span class="material-symbols-outlined">check_circle</span>
+</div>
+<div>
+<p class="text-sm font-bold">Wallet Transfer</p>
+<p class="text-xs text-slate-500">Oct 15, 2023 • 11:45</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-sm font-bold">-$450.00</p>
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-500/10 text-emerald-500 uppercase tracking-tighter">Completed</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation -->
+<nav class="sticky bottom-0 z-50 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800">
+<div class="max-w-md mx-auto flex items-center justify-around py-3">
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="text-[10px] font-medium">Markets</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined text-[28px] fill-[1]">wallet</span>
+<span class="text-[10px] font-bold">Wallet</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">swap_horiz</span>
+<span class="text-[10px] font-medium">Trade</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400 hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

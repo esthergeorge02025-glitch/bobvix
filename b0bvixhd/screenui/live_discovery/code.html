@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix Live Discovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+<!-- Header / Search Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 px-4 py-3">
+<div class="flex items-center gap-3">
+<div class="flex-1 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xl">search</span>
+<input class="w-full bg-slate-100 dark:bg-slate-900 border-none rounded-xl py-2.5 pl-10 pr-4 text-sm focus:ring-2 focus:ring-primary font-display" placeholder="Search streams, creators..." type="text"/>
+</div>
+<button class="relative p-2 rounded-xl bg-slate-100 dark:bg-slate-900 text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-primary rounded-full ring-2 ring-background-light dark:ring-background-dark"></span>
+</button>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/30">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Gaming avatar user profile picture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsXSDX_jed4vn9S7Vzibx6_1zhS9hI9TtuMLPC3JI78YsC4kyz4Gv2W4EU1RWZzyAVdQunQeJbhbR1Zhvm_rwZoaV8eabEahRwtqfXjxF67dPc2jlOdmWZpPn2ydfOS7nMfoEoUZD4QUIEm0XCx0vmpckeLugIoHebWKVUZyy3XbWqU5j82DJaBfOs-Mqsh4FCHY8DJfHeqVHp9RGpzWhD3TAT7AUN0sPOc3irjyui6q61kiXvyexRCqp_9hq_XV8-q4DEoczBspaw"/>
+</div>
+</div>
+<!-- Category Filters -->
+<div class="flex gap-2 mt-4 overflow-x-auto hide-scrollbar pb-1">
+<button class="px-5 py-1.5 rounded-full bg-primary text-white text-sm font-medium whitespace-nowrap">All</button>
+<button class="px-5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium whitespace-nowrap hover:bg-primary/20 transition-colors">Gaming</button>
+<button class="px-5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium whitespace-nowrap hover:bg-primary/20 transition-colors">Just Chatting</button>
+<button class="px-5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium whitespace-nowrap hover:bg-primary/20 transition-colors">Music</button>
+<button class="px-5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium whitespace-nowrap hover:bg-primary/20 transition-colors">Software</button>
+<button class="px-5 py-1.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 text-sm font-medium whitespace-nowrap hover:bg-primary/20 transition-colors">Creative</button>
+</div>
+</header>
+<!-- Main Content Grid -->
+<main class="flex-1 p-4 pb-24 overflow-y-auto">
+<h2 class="text-xl font-bold mb-4 font-display flex items-center gap-2">
+<span class="w-2 h-6 bg-primary rounded-full"></span>
+            Recommended Live
+        </h2>
+<div class="grid grid-cols-2 gap-4">
+<!-- Stream Card 1 -->
+<div class="flex flex-col gap-2 group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-slate-800">
+<img alt="Stream Preview" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" data-alt="Competitive esports gaming match live preview" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYrUwblpWVI2D7jwq8Tv_WAf0qf6_BgOvOX1x0VRLTqOJXqdJ-cXzf7w3ik7iLNMVERIL8JxQo2GzephKbjEZgCfZtDovJPNHZ7k8SZdGrCQAz52rrieu5vhnhOLSd6Bvr--ByF7MzAgPZ0hxrxy68cmMT_seHBeJ2Xff_9kaE5K6lN9OBXMHo026ctrMOyGAEx4a1PxMDiFlF3i8AabRa0J4cXyvDVoZTHhoWicq2ehoZ_rn1-EmQc471CU6DhdIaQlV9erbCw30-"/>
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Live</span>
+<span class="bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">visibility</span> 14.2k
+                        </span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3">
+<p class="text-white text-xs font-medium truncate">Late Night Valorant Grinding</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full ring-1 ring-primary/40" data-alt="User profile avatar icon small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWMSkhrIoWmZlV19LH_zf1owK7JmK7yiW7ikJRDbopHPz_-NI1npUBi6VpiRvI1IIZgeeEPWPK0YZ1_cnekZArMdMGDahQygkmndLj93fev59brA4xY5EPhyaOLmwPWg_pkeaxamH7vvT8GeulThzfvDZ8gL1Jx66Tm6F9hwqepHQGS9xql7JAu7N7AFZbRNnIDYBguxvQLmsmgpgAZzYo9HTwmhkzQ-J9nLmAB8acT9Ll9D8a-OeCSVTt_1ptiOiXmvv_HSZTknLQ"/>
+<span class="text-sm font-semibold truncate dark:text-slate-200">VixMaster_99</span>
+</div>
+</div>
+<!-- Stream Card 2 -->
+<div class="flex flex-col gap-2 group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-slate-800">
+<img alt="Music Preview" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" data-alt="Music producer at studio workstation live" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVrXujOChLn8k-8L2O7X0YJ7Z341NpEFH-MhsccOc6uQos90-_1N7btpcM4VR52wy_Y63MS8l9iukIe8AQRMIOD8CgwfC1PeuUD0eWZe1GRRPRpuu6aP6Dd1qH-kLJSNOguKzS0WjskZ77QwZgqspriDLxxlRKlDLfLM1JXplAsSTwbxykrklP82TB7tHmCzGkWfEewGzepffaK-2k1N0nHePfPgU_2u3vK5zfRzSVKeYk97KFseW_lfzmsBekPa4egS69SNuHO8sw"/>
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Live</span>
+<span class="bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">visibility</span> 3.1k
+                        </span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3">
+<p class="text-white text-xs font-medium truncate">Lofi Beats to Study/Relax To</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full ring-1 ring-primary/40" data-alt="User profile avatar icon small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBCxNe_FJTxIU1-snbo_Lp1P1boi-BuySdCEiEyIFln8XeMX3XKpi8tODDPk290R2TqCH_daM9ZRlWtlVNx6KBlTVu62vZEAl42l0ey-l9hTOP9gE6rTMiOlPFJWBbi7__Wfg5Mk0L7KsyO5nePI3UITq1yAxPNKnJg_C1UkZfmvyoUG9XYezlfD_EBdsyhZz-VnxmkQ33XcdqATp84n5LR5R81SqyH3kakICXnt_XqXD9NNYS9bBR04QHx4kd4pzMEB_uOcj27Vpd"/>
+<span class="text-sm font-semibold truncate dark:text-slate-200">SynthWaves</span>
+</div>
+</div>
+<!-- Stream Card 3 -->
+<div class="flex flex-col gap-2 group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-slate-800">
+<img alt="Tech Preview" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" data-alt="Software developer coding dashboard live stream" src="https://lh3.googleusercontent.com/aida-public/AB6AXuACtFH1_ebWBJnLQXxqH-jXAKmpyvEvw6dCrZGO5VrGusUYwCGuBMDODL1AW3TeRiaZnRmW7Y73Q43BiLxohkRw-wS9NTThs2TKILTxoV2ecLEKHvZZdjgYIOghGtiN0_cA46QOy9KCu1RAdVuJW8ly4lLsxB3n711fV_7XHlbqjyaX1P69OsjmCq-9arz8qu160IcCOhYsBLVei10BA2TUNlqP_fG0uOljzPC7ooSSyELAnSGDRMPiVwVkMh0W25fK0qGyGPeqSU9G"/>
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Live</span>
+<span class="bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">visibility</span> 852
+                        </span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3">
+<p class="text-white text-xs font-medium truncate">Building a Next.js App</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full ring-1 ring-primary/40" data-alt="User profile avatar icon small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBp1Z3Y74v1_bRrwxrU7L5NoRFCvMpvyztru3vzKQqjq0dNEfF2SCS-lPVOGWZSVH3t8iS35IvOEuPyq3wN1vFOoVhQuJK7XkRwk39orsL_KYJs0tOtXl6vjdAEgxsdeDVaH0Tk1CrWFMOUUEfB3Q4d5Z4lcwmOXs1giXcJbgGHnusAl-sF7LfPWizMFEFszneV20KwWQEdcqEVWR0SqOZS5xfMhw5W87qXvt1wti82gcc95uLmAzaGTsvoJ6NxHkm-SncwJhRYCX0D"/>
+<span class="text-sm font-semibold truncate dark:text-slate-200">CodeWithMe</span>
+</div>
+</div>
+<!-- Stream Card 4 -->
+<div class="flex flex-col gap-2 group cursor-pointer">
+<div class="relative aspect-[3/4] rounded-xl overflow-hidden bg-slate-800">
+<img alt="IRL Preview" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110" data-alt="Streamer talking to camera in cozy room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgfwp-OuGqrsSrV6ElnPTyDVXAYMtTjH8zJL5hlPaPwcUG9rOfBEE-5NvwoCFIluOqi0HL-IV-pOGQQr7gcaxH-VSjTaAPIeO8zJEmP2AtQmAVZsGe3oYOic_sp01nGjrm79pW_G3_Y1XZTp2cEWJqNkYZKouCxqkAV4-GJZm1IcdsYHiFhU9Z5wGUfnLdsmkamI5nvqUk94TUmqqHYcY0X06HYQuCRagIOgy_CuHE42UxvqvkqomYKuCIxxon-aXVV_Ydv7MNXP88"/>
+<div class="absolute top-3 left-3 flex gap-1.5">
+<span class="bg-primary text-white text-[10px] font-bold px-2 py-0.5 rounded uppercase tracking-wider">Live</span>
+<span class="bg-black/60 backdrop-blur-sm text-white text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">visibility</span> 2.7k
+                        </span>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-3 left-3 right-3">
+<p class="text-white text-xs font-medium truncate">Morning Tea &amp; Chatting</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<img class="w-6 h-6 rounded-full ring-1 ring-primary/40" data-alt="User profile avatar icon small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsfM5yYOkLGJimtYR8aKSsWrtazOL3liRYkUyRnO6kH4Ylod8SkrXLwslJF7SCxZzSLpK-ypxkLQm1pwUvNM7HddyYS25ulRRyIAwYK02FQkRa84I5rA6gEqBZe_FTM56xJH6rMV1Uv1qp9EfRjo-6CezO6KvmWJaZYIGdRTykuTgbbH21jCquJgKuO7flkMJoON4KK-mwrs_B2Z4U18slhfAzS8AO93qKSgJaflFr1PmIj3cnill7aixlvWXVbVA2l1ChoaYf6cOc"/>
+<span class="text-sm font-semibold truncate dark:text-slate-200">GamerGirl_X</span>
+</div>
+</div>
+</div>
+<!-- Floating Action Button -->
+<button class="fixed right-6 bottom-24 bg-primary text-white w-14 h-14 rounded-full shadow-lg shadow-primary/40 flex items-center justify-center hover:scale-105 transition-transform active:scale-95">
+<span class="material-symbols-outlined text-3xl">videocam</span>
+</button>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 w-full bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 px-6 py-3 pb-6">
+<div class="flex justify-between items-center max-w-md mx-auto">
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="text-[10px] font-display font-medium">Home</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-primary" href="#">
+<span class="material-symbols-outlined font-variation-fill">explore</span>
+<span class="text-[10px] font-display font-medium">Discover</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">favorite</span>
+<span class="text-[10px] font-display font-medium">Following</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-slate-400" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-display font-medium">Profile</span>
+</a>
+</div>
+</nav>
+<style>
+        .font-variation-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</body></html>

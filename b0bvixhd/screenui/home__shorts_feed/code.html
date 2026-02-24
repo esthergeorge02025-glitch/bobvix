@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix Home Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .electric-glow {
+            box-shadow: 0 0 15px 2px rgba(60, 131, 246, 0.6);
+        }
+        .glass-panel {
+            background: rgba(16, 23, 34, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+        }
+        .text-shadow {
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+        .video-container {
+            height: 100dvh;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 overflow-hidden">
+<div class="relative flex h-screen w-full flex-col overflow-hidden max-w-md mx-auto border-x border-slate-800/50 shadow-2xl">
+<!-- Full-screen Background Video Placeholder -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="Abstract blue and dark wave background representing a dynamic video" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAeG7hqds7nBjkqmoItENeX2QSotWpgeiO6ZcU0nmk9xyNF63cMrgHOwP3N7Y_C3YfvZGfvZw4W0wNBaZ45faQ_JOBDkiJdJF-KQmI6mPwj2Z2iqlPQyill71D9uOKtUwi4n_Bz-Pg6uVVMSytps7kIDH8DUuWsOExuwuWk41wi4PRiCoIcg8fw0D5DeNcayVy91w_GkuxoEmvTe0zvu1vCzmaWWPWJLCmTMGigLRzf-d4wT6na9NWVzHQS_ix2gF6u-xQwSrXXjJH8');">
+<!-- Overlay gradient for UI readability -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/80"></div>
+</div>
+</div>
+<!-- Top Header: Navigation Toggles -->
+<div class="relative z-10 flex items-center justify-center pt-8 pb-4">
+<div class="flex gap-6 items-center glass-panel px-6 py-2 rounded-full border border-white/10">
+<button class="text-sm font-bold text-slate-400">Following</button>
+<div class="flex flex-col items-center">
+<button class="text-sm font-bold text-slate-100 transition-all">For You</button>
+<div class="h-1 w-6 bg-primary rounded-full mt-1 electric-glow"></div>
+</div>
+</div>
+<div class="absolute right-4 top-8">
+<span class="material-symbols-outlined text-white p-2 glass-panel rounded-full cursor-pointer">search</span>
+</div>
+</div>
+<!-- Middle Section: Content & Sidebar -->
+<div class="relative z-10 flex flex-1 flex-row items-end pb-4 px-4">
+<!-- Bottom Left: Metadata -->
+<div class="flex-1 mb-16 flex flex-col gap-3">
+<div class="flex items-center gap-2">
+<div class="size-10 rounded-full border-2 border-primary bg-cover bg-center" data-alt="Profile avatar of a creator" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDqRfNGS7XyA_bMS3BRBdARJpSTWZ4B2bd9G5L9UOgDhGhLtf-nleNU0Ld6g8tpUpDZDz_XeRgDGVEtleIlwiSdk6dNcet3lkxf306na_q2dJ_YJsm39FVzf9waBC4PyOViiIFwcx9yD_K57D7hfLq-KxdtuBybFXVcmZXyT7nLJ6G-9EQAjlkKQPgwntQt9JKV-XNgNfOigC1CbCHxHlrSfcyHS17Bxsywsa2JKxtmbSjuAPXIoV6cF5ZMsKS1CoZjRgvcsctgKPTF');"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="text-base font-bold text-white text-shadow">@bobvix_creator</span>
+<span class="material-symbols-outlined text-primary text-[18px]" style="font-variation-settings: 'FILL' 1">verified</span>
+</div>
+</div>
+<button class="bg-primary hover:bg-primary/90 text-white text-xs font-bold px-3 py-1 rounded-lg ml-2 shadow-lg">Follow</button>
+</div>
+<div class="max-w-[85%]">
+<p class="text-sm text-white/90 leading-relaxed text-shadow line-clamp-2">
+                        Exploring the new electric blue aesthetic in the meta-city! ⚡️ <span class="text-primary font-bold">#vibes</span> <span class="text-primary font-bold">#bobvix</span> <span class="text-primary font-bold">#creative</span>
+</p>
+</div>
+<div class="flex items-center gap-2 glass-panel w-fit px-3 py-1 rounded-full border border-white/5">
+<span class="material-symbols-outlined text-white text-[16px]">music_note</span>
+<span class="text-[12px] text-white font-medium whitespace-nowrap overflow-hidden">
+                        Original Sound - BobVix Audio Lab
+                    </span>
+</div>
+</div>
+<!-- Right Sidebar: Action Buttons -->
+<div class="flex flex-col items-center gap-6 mb-16 ml-auto">
+<!-- Like -->
+<div class="flex flex-col items-center gap-1">
+<div class="size-12 flex items-center justify-center glass-panel rounded-full text-white cursor-pointer group hover:bg-red-500/20 transition-colors">
+<span class="material-symbols-outlined text-[28px] group-hover:text-red-500 transition-colors">favorite</span>
+</div>
+<span class="text-xs font-bold text-white text-shadow">1.2M</span>
+</div>
+<!-- Comment -->
+<div class="flex flex-col items-center gap-1">
+<div class="size-12 flex items-center justify-center glass-panel rounded-full text-white cursor-pointer">
+<span class="material-symbols-outlined text-[28px]">chat_bubble</span>
+</div>
+<span class="text-xs font-bold text-white text-shadow">45K</span>
+</div>
+<!-- Gift Icon (Special Interaction) -->
+<div class="flex flex-col items-center gap-1">
+<div class="size-12 flex items-center justify-center bg-gradient-to-tr from-yellow-400 to-amber-600 rounded-full text-white cursor-pointer shadow-lg shadow-amber-500/20">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1">card_giftcard</span>
+</div>
+<span class="text-xs font-bold text-white text-shadow">Gift</span>
+</div>
+<!-- Share -->
+<div class="flex flex-col items-center gap-1">
+<div class="size-12 flex items-center justify-center glass-panel rounded-full text-white cursor-pointer">
+<span class="material-symbols-outlined text-[28px]">share</span>
+</div>
+<span class="text-xs font-bold text-white text-shadow">12K</span>
+</div>
+<!-- Spinning Record -->
+<div class="relative size-12 mt-4">
+<div class="absolute inset-0 bg-slate-900 rounded-full border-2 border-slate-700 animate-[spin_3s_linear_infinite]">
+<div class="absolute inset-2 bg-cover bg-center rounded-full" data-alt="Album art of the music track" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5-ZD9NdErz8Vl8l3F2-wPwKWzrO0yw50Rg33APkRXjB364RIy1byOd7S_AHa7qukKan0OuIJ4qG9I4sf0ryRRSPWjCT1cRluC3r0xH3qp5F4sk8Y90Y7dZVKo3dB8tfcZ5bWVK7hAvbQLC3kGbO8t-rAkhLI_MfpppIb3D9g55vOe_MeGdXZDFRjkUiFsymue081b6-3wHC_gzIziHdytqEJvZnVrOTcG-cvHxtj30DpTvskkJe5h64mIPzJYhr5cWt46pItkJd-p');"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="relative z-20 glass-panel border-t border-white/10 px-4 pb-8 pt-4">
+<div class="flex items-center justify-between">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center gap-1 flex-1 transition-all" href="#">
+<div class="text-primary flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 electric-glow" style="box-shadow: 0 0 20px rgba(60, 131, 246, 0.4);">
+<span class="material-symbols-outlined text-[26px]" style="font-variation-settings: 'FILL' 1">home</span>
+</div>
+<p class="text-primary text-[10px] font-bold tracking-wider">HOME</p>
+</a>
+<!-- Shorts -->
+<a class="flex flex-col items-center justify-center gap-1 flex-1 text-slate-400" href="#">
+<div class="flex h-10 w-10 items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">video_library</span>
+</div>
+<p class="text-[10px] font-medium tracking-wider">SHORTS</p>
+</a>
+<!-- Live -->
+<a class="flex flex-col items-center justify-center gap-1 flex-1 text-slate-400" href="#">
+<div class="flex h-10 w-10 items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">sensors</span>
+</div>
+<p class="text-[10px] font-medium tracking-wider">LIVE</p>
+</a>
+<!-- Notifications -->
+<a class="flex flex-col items-center justify-center gap-1 flex-1 text-slate-400" href="#">
+<div class="flex h-10 w-10 items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">notifications</span>
+</div>
+<p class="text-[10px] font-medium tracking-wider">INBOX</p>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center gap-1 flex-1 text-slate-400" href="#">
+<div class="flex h-10 w-10 items-center justify-center">
+<span class="material-symbols-outlined text-[26px]">person</span>
+</div>
+<p class="text-[10px] font-medium tracking-wider">PROFILE</p>
+</a>
+</div>
+</div>
+<!-- Video Progress Bar (Bottom) -->
+<div class="absolute bottom-[92px] left-0 right-0 h-0.5 bg-white/20 z-30">
+<div class="h-full bg-primary w-1/3 electric-glow"></div>
+</div>
+</div>
+</body></html>

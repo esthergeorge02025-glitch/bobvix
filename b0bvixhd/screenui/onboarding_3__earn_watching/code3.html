@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix Onboarding - Earn by Watching</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#101722",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased transition-colors duration-300">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<div class="flex items-center justify-end p-6">
+<button class="text-slate-500 dark:text-slate-400 hover:text-primary transition-colors text-base font-medium tracking-wide">
+                Skip
+            </button>
+</div>
+<!-- Hero Section -->
+<div class="flex flex-1 flex-col items-center justify-center px-6">
+<div class="relative w-full max-w-sm aspect-square mb-12">
+<!-- Background Glow Effect -->
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-[80px]"></div>
+<!-- Illustration Container -->
+<div class="relative z-10 w-full h-full bg-slate-800/40 dark:bg-slate-900/40 backdrop-blur-md rounded-xl border border-white/10 flex items-center justify-center overflow-hidden shadow-2xl">
+<div class="absolute inset-0 flex items-center justify-center opacity-20">
+<span class="material-symbols-outlined text-[200px] text-primary">play_circle</span>
+</div>
+<!-- Floating Reward Icons -->
+<div class="flex flex-col items-center gap-6">
+<div class="flex gap-4 items-end">
+<div class="p-4 bg-primary rounded-lg shadow-lg shadow-primary/40">
+<span class="material-symbols-outlined text-white text-4xl">currency_exchange</span>
+</div>
+<div class="p-3 bg-white/10 backdrop-blur-lg border border-white/20 rounded-lg">
+<span class="material-symbols-outlined text-primary text-2xl">video_library</span>
+</div>
+</div>
+<div class="bg-slate-900/80 p-4 rounded-xl border border-primary/30 flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-white text-sm">bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="text-xs text-slate-400">Earning Rate</span>
+<span class="text-sm font-bold text-white">+50 VixPoints/min</span>
+</div>
+</div>
+</div>
+<!-- Decorative Background Image -->
+<div class="absolute bottom-0 w-full h-32 bg-gradient-to-t from-background-dark to-transparent opacity-60"></div>
+<div class="absolute inset-0 w-full h-full bg-cover bg-center -z-10 mix-blend-overlay" data-alt="Abstract vibrant electric blue digital pattern" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYYFulyGVq4hRstZj-TH9sXfIhIGS6OGjXC-4lkbPmJyPCUyZI1l-iSNpOWD4y8CWdwM0SDa9M7X3vSNSVJPuaB610cCRXkYtEUSoo5RQLI2jougprDA2lRAIMoyz4F8m60SrozcPaK5WfIN9XEv8QJzYYM59ibUP31RsY2sSjTDOjUxDtnr977y_QsJyAXuarpw6Cxq-tvtGSxepEbiIOacXZTCbqBadCD1GbuAZWt7qR6Ktc3WflYB9kqvehWGMVT-MK3Gz7EQFF');">
+</div>
+</div>
+</div>
+<!-- Text Content -->
+<div class="text-center max-w-md">
+<h1 class="text-slate-900 dark:text-white text-3xl font-bold leading-tight mb-4">
+                    Earn While You Watch
+                </h1>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed px-4">
+                    Your time is valuable. Get rewarded with VixPoints for every minute you spend watching your favorite creators.
+                </p>
+</div>
+</div>
+<!-- Footer Actions -->
+<div class="p-8 flex flex-col items-center gap-8">
+<!-- Pagination Dots (3 of 4) -->
+<div class="flex flex-row items-center justify-center gap-3">
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+<div class="h-2 w-6 rounded-full bg-primary transition-all duration-300"></div>
+<div class="h-2 w-2 rounded-full bg-slate-300 dark:bg-slate-700"></div>
+</div>
+<!-- Primary Action -->
+<button class="group relative w-full max-w-xs h-14 flex items-center justify-center bg-primary hover:bg-primary/90 text-white rounded-lg font-bold text-lg transition-all duration-300 shadow-xl shadow-primary/20">
+<span>Next</span>
+<span class="material-symbols-outlined ml-2 group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<!-- Bottom Spacer -->
+<div class="h-6 bg-background-light dark:bg-background-dark"></div>
+</div>
+</body></html>

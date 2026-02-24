@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BobVix - Choose Your Identity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3c83f6",
+                        "background-light": "#f5f7f8",
+                        "background-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        'neon': '0 0 15px -3px rgba(60, 131, 246, 0.5), 0 4px 6px -2px rgba(60, 131, 246, 0.2)',
+                        'neon-strong': '0 0 25px -5px rgba(60, 131, 246, 0.6)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .neon-text-glow {
+            text-shadow: 0 0 10px rgba(60, 131, 246, 0.4);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex flex-col font-display">
+<!-- Top Navigation -->
+<nav class="flex items-center justify-between p-6">
+<button class="flex items-center justify-center size-10 rounded-full bg-slate-200 dark:bg-slate-800/50 hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-slate-900 dark:text-slate-100">arrow_back</span>
+</button>
+<div class="h-1 w-24 bg-slate-200 dark:bg-slate-800 rounded-full overflow-hidden">
+<div class="h-full w-2/3 bg-primary shadow-neon"></div>
+</div>
+<div class="size-10"></div> <!-- Spacer for symmetry -->
+</nav>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col px-6 pt-4 pb-32 max-w-lg mx-auto w-full">
+<!-- Header Section -->
+<header class="mb-10">
+<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4 neon-text-glow tracking-tight">
+                Choose your <span class="text-primary">identity</span>
+</h1>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                Pick a unique name to represent you in the <span class="font-bold text-slate-300">BobVix</span> universe.
+            </p>
+</header>
+<!-- Username Input Section -->
+<section class="space-y-6">
+<div class="group">
+<label class="block text-sm font-medium text-slate-500 dark:text-slate-400 mb-2 ml-1" for="username">
+                    USERNAME
+                </label>
+<div class="relative">
+<input class="w-full h-16 bg-white dark:bg-slate-900/50 border-2 border-slate-200 dark:border-slate-800 rounded-xl px-5 text-xl font-medium focus:outline-none focus:border-primary focus:ring-4 focus:ring-primary/10 transition-all text-slate-900 dark:text-white placeholder:text-slate-400 dark:placeholder:text-slate-600" id="username" placeholder="Enter username..." type="text" value="VixRunner"/>
+<!-- Live Availability Check -->
+<div class="absolute right-4 top-1/2 -translate-y-1/2 flex items-center gap-2">
+<span class="text-primary text-sm font-bold tracking-wide hidden sm:inline">AVAILABLE</span>
+<div class="bg-primary/20 p-1.5 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-primary font-bold text-xl">check_circle</span>
+</div>
+</div>
+</div>
+<p class="mt-3 text-sm text-primary font-medium flex items-center gap-1.5 px-1">
+<span class="size-1.5 bg-primary rounded-full animate-pulse"></span>
+                    Live availability check active
+                </p>
+</div>
+<!-- Suggestions -->
+<div class="pt-4">
+<p class="text-sm font-medium text-slate-500 dark:text-slate-400 mb-4 ml-1 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">auto_awesome</span>
+                    SUGGESTIONS FOR YOU
+                </p>
+<div class="flex flex-wrap gap-3">
+<button class="px-5 py-2.5 rounded-full bg-slate-200 dark:bg-slate-800/80 border border-transparent hover:border-primary/50 hover:bg-primary/10 transition-all text-sm font-medium text-slate-700 dark:text-slate-300">
+                        VixRunner_X
+                    </button>
+<button class="px-5 py-2.5 rounded-full bg-slate-200 dark:bg-slate-800/80 border border-transparent hover:border-primary/50 hover:bg-primary/10 transition-all text-sm font-medium text-slate-700 dark:text-slate-300">
+                        Bob_Alpha7
+                    </button>
+<button class="px-5 py-2.5 rounded-full bg-slate-200 dark:bg-slate-800/80 border border-transparent hover:border-primary/50 hover:bg-primary/10 transition-all text-sm font-medium text-slate-700 dark:text-slate-300">
+                        CyberVix
+                    </button>
+<button class="px-5 py-2.5 rounded-full bg-slate-200 dark:bg-slate-800/80 border border-transparent hover:border-primary/50 hover:bg-primary/10 transition-all text-sm font-medium text-slate-700 dark:text-slate-300">
+                        NeonStryker
+                    </button>
+</div>
+</div>
+</section>
+<!-- Visual Accent Element -->
+<div class="mt-auto pt-10 flex justify-center opacity-40">
+<div class="w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent"></div>
+</div>
+</main>
+<!-- Bottom Action Button -->
+<footer class="fixed bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-background-light dark:from-background-dark via-background-light/90 dark:via-background-dark/90 to-transparent">
+<div class="max-w-lg mx-auto">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-5 rounded-xl text-lg transition-all shadow-neon hover:shadow-neon-strong active:scale-[0.98] flex items-center justify-center gap-2">
+                Continue
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</footer>
+<!-- Background Decoration -->
+<div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none">
+<div class="absolute top-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-primary/10 blur-[100px]"></div>
+<div class="absolute bottom-[-5%] left-[-5%] w-[30%] h-[30%] rounded-full bg-primary/5 blur-[80px]"></div>
+</div>
+</body></html>
